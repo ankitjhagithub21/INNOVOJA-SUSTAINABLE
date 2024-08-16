@@ -1,41 +1,9 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { IoIosClose, IoIosMenu } from "react-icons/io";
-
+import links from '../data/links';
 const Navbar = () => {
-  const links = [
-    {
-      id:1,
-      name:"About Us",
-      path:"/about"
-    },
-    {
-      id:2,
-      name:"Our Tech",
-      path:"/technology"
-    },
-    {
-      id:3,
-      name:"Applications",
-      path:"/applications"
-    },
-    {
-      id:4,
-      name:"Resources",
-      path:"/resources"
-    },
-    {
-      id:5,
-      name:"Media",
-      path:"/media"
-    },
-    {
-      id:6,
-      name:"How to Buy",
-      path:"/how-to-buy"
-    },
-
-  ]
+  
   const [active,setActive] = useState(-1)
   const [menu,setMenu] = useState(false)
   return (

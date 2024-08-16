@@ -3,9 +3,13 @@
     font-family: "Chivo", sans-serif;
     outline: none;
 }
+html,body{
+    scroll-behavior: smooth;
+}
 body{
     background-color: #242941;
     color: white;
+   
 }
 
 
