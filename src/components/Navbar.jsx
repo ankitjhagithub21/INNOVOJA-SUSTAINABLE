@@ -36,13 +36,13 @@ const Navbar = () => {
     },
 
   ]
-  const [active,setActive] = useState(0)
+  const [active,setActive] = useState(-1)
   const [menu,setMenu] = useState(false)
   return (
     <header className='bg-[#242941] text-white px-5 py-4 fixed top-0 shadow-lg z-50 w-full left-0'>
       <nav className='container mx-auto flex lg:flex-row md:flex-col flex-row gap-2 flex-wrap items-center justify-between'>
         <Link to={"/"}>
-        <img src="https://ionomr.com/wp-content/uploads/2020/09/Ionomr-Current-logo-white.png" alt="logo"  width={200}/>
+        <img src="https://ionomr.com/wp-content/uploads/2020/09/Ionomr-Current-logo-white.png" alt="logo" loading='lazy'  width={200}/>
         </Link>
         <ul className='md:flex hidden items-center '>
          {
