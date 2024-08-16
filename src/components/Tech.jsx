@@ -15,7 +15,7 @@ const Tech = () => {
                 <p className='mt-10'>Explore <Link to="/applications" className='hover:underline text-[#F4965D]'>our Applications Hub</Link> to learn more about specific system use.</p>
              
             </div>
-            <div className='container mx-auto text-center flex flex-wrap font-bold text-3xl lg:p-5 p-0'>
+            <div className='container mx-auto text-center flex flex-wrap font-bold lg:text-3xl md:text-2xl text-xl lg:p-5 p-0'>
                 <div className='md:w-1/2 w-full md:p-10 p-5'>
                     <img src="https://ionomr.com/wp-content/uploads/2018/10/aem-electrolysis-a-740x416.jpg" alt="" className='hover:scale-105 cursor-pointer transition duration-500' />
                     <h1 className='mt-5'>Hydrogen</h1>
