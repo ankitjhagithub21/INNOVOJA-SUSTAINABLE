@@ -20,7 +20,7 @@ const Tech = () => {
                     <img src="https://ionomr.com/wp-content/uploads/2018/10/aem-electrolysis-a-740x416.jpg" alt="" className='hover:scale-105 cursor-pointer transition duration-500' />
                     <h1 className='mt-5'>Hydrogen</h1>
                 </div>
-                <div className='w-1/2 lg:p-10 p-5'>
+                <div className='w-1/2 md:p-10 p-5'>
                     <img src="https://ionomr.com/wp-content/uploads/2018/10/chlor-alkali-process-a-740x416.jpg" alt="" className='hover:scale-105 cursor-pointer transition duration-500' />
                     <h1 className='mt-5'>Chemicals</h1>
                 </div>
