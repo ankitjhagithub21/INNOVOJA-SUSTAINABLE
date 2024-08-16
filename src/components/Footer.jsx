@@ -11,7 +11,7 @@ const Footer = () => {
       <div className="container mx-auto px-5 py-12 flex flex-wrap border-b">
         <div className='flex flex-col gap-5 lg:w-1/3 md:w-1/2 w-full p-5'>
           <img src="https://ionomr.com/wp-content/uploads/2020/09/Ionomr-Current-logo-white.png" alt="" width={200} />
-          <p className='text-sm text-gray-300'>Ionomr Innovations develops the world’s most advanced ion-exchange membranes & polymers.</p>
+          <p className='text-sm text-gray-400'>Ionomr Innovations develops the world’s most advanced ion-exchange membranes & polymers.</p>
           <div className='flex gap-3 items-center justify-start'>
             <a href='#' target='_blank' className='bg-[#F4965D] rounded-full p-3 text-[#242941] hover:bg-gray-200 transition duration-300'>
               <FaTwitter />
@@ -48,11 +48,11 @@ const Footer = () => {
        
          
          <div className=' gap-5 grid grid-cols-2'>
-          <Link to="/" className='hover:text-[#F4965D] '>Home</Link>
+          <Link to="/" className='hover:text-[#F4965D] text-gray-400'>Home</Link>
         
           {
             links.map((link)=>{
-              return <Link to={link.path} key={link.id} className='hover:text-[#F4965D] '>{link.name}</Link>
+              return <Link to={link.path} key={link.id} className='hover:text-[#F4965D] text-gray-400'>{link.name}</Link>
             })
           }
          </div>
