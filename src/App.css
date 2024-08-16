@@ -11,13 +11,30 @@ body{
     color: white;
    
 }
-.about{
+/* about page */
+.about {
+    position: relative;
     background-image: url(https://ionomr.com/wp-content/uploads/2018/11/ben-with-membrane-roll.jpg?id=1695);
     background-size: cover;
     background-position: center;
     width: 100%;
-    height: 100vh;
+    color: white; /* Ensures text color remains visible */
 }
 
+.about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+    z-index: 1; /* Place it under the content */
+}
+
+.about-content {
+    position: relative;
+    z-index: 2; /* Place content above the overlay */
+}
 
 
