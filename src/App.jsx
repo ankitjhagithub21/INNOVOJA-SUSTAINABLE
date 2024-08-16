@@ -5,6 +5,7 @@ import About from './pages/About'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import "./App.css"
+import NotFound from './pages/NotFound'
 const App = () => {
   return (
     <Router>
@@ -12,6 +13,7 @@ const App = () => {
       <Routes>
         <Route path='/' Component={Home}/>
         <Route path='/about' Component={About}/>
+        <Route path='/*' Component={NotFound}/>
       </Routes>
       <Footer/>
     </Router>
