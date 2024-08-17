@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Overlay from '../components/Overlay'
 import {Link} from "react-router-dom"
 
 
 const HowToBuy = () => {
+  useEffect(()=>{
+    document.title = "How to Buy - Innovoja Sustainable"
+  },[])
   return (
     <>
     <section className='how-to-buy relative h-[70vh] w-full'>

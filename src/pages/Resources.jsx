@@ -1,11 +1,14 @@
 
+import { useEffect } from 'react';
 import AccordionItem from '../components/AccordionItem';
 import Overlay from '../components/Overlay';
 
 
 
 const Resources = () => {
-
+  useEffect(()=>{
+    document.title ="The Solutions Center - Innovoja Sustainable"
+  },[])
   return (
     <section>
       <div className='h-fit py-12  w-full relative flex'>

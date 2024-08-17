@@ -13,6 +13,7 @@ import Media from './pages/Media'
 import HowToBuy from './pages/HowToBuy'
 import MoreInfo from './pages/MoreInfo'
 import GoToTop from './components/GoToTop'
+import Contact from './pages/Contact'
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
         <Route path='/media' Component={Media}/>
         <Route path='/how-to-buy' Component={HowToBuy}/>
         <Route path='/get-more-info' Component={MoreInfo}/>
+        <Route path='/contact' Component={Contact}/>
         <Route path='/*' Component={NotFound}/>
       </Routes>
       <GoToTop/>

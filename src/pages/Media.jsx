@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 
 const Media = () => {
+  useEffect(()=>{
+    document.title ="Media - Innovoja Sustainable"
+  },[])
   return <section className='py-24'>
     <h1 className='lg:text-5xl text-3xl font-semibold text-center mb-10 lg:mt-10 md:mt-24 mt-10'>News & Media</h1>
     <div className='container mx-auto flex flex-wrap'>
