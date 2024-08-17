@@ -1,4 +1,5 @@
 import {useEffect} from 'react'
+import ContactInfo from '../components/ContactInfo'
 
 const Contact = () => {
     useEffect(()=>{
@@ -6,7 +7,7 @@ const Contact = () => {
       },[])
   return (
     <>
-      Contact Page
+      <ContactInfo/>
     </>
   )
 }
