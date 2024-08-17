@@ -8,9 +8,10 @@ const Home = () => {
     heading:"How Do We Do That?",
     para:"By creating the most durable and innovative ion exchange membranes and polymers:"
   }
-  
+
   useEffect(()=>{
     window.scrollTo(0,0)
+    document.title = "Innovoja sustainable"
   },[])
   
   

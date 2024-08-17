@@ -8,6 +8,7 @@ const Technology = () => {
   }
   useEffect(()=>{
     document.title = "Our Technology - Innovoja sustainable"
+    window.scrollTo(0,0)
   },[])
 
   return (
