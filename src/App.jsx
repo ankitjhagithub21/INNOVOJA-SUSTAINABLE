@@ -12,6 +12,7 @@ import Resources from './pages/Resources'
 import Media from './pages/Media'
 import HowToBuy from './pages/HowToBuy'
 import MoreInfo from './pages/MoreInfo'
+import GoToTop from './components/GoToTop'
 
 const App = () => {
   return (
@@ -28,6 +29,7 @@ const App = () => {
         <Route path='/get-more-info' Component={MoreInfo}/>
         <Route path='/*' Component={NotFound}/>
       </Routes>
+      <GoToTop/>
       <Footer/>
     </Router>
   )
