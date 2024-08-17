@@ -4,14 +4,21 @@ import Tech from '../components/Tech'
 import Services from '../components/Services'
 
 const Home = () => {
+  const data = {
+    heading:"How Do We Do That?",
+    para:"By creating the most durable and innovative ion exchange membranes and polymers:"
+  }
+  
   useEffect(()=>{
     window.scrollTo(0,0)
   },[])
+  
+  
   return (
     <>
       <Hero/>
       <Tech/>
-      <Services/>
+      <Services data={data}/>
 
     </>
   )
