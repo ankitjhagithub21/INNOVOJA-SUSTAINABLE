@@ -68,7 +68,7 @@ const Navbar = () => {
               {link.name}
             </Link>
           ))}
-           <Link to={"/get-more-info"} onClick={()=>setMenu(false)} className='px-4 py-2 bg-[#F4965D]  rounded-full  hover:bg-[#242941] hover:text-white'>Get More Info</Link>
+           <Link to={"/get-more-info"} onClick={()=>setMenu(false)} className='px-4 text-xl  font-bold py-2 bg-[#242941]  rounded-full  hover:bg-[#242941] hover:text-white'>Get More Info</Link>
         </div>
       </nav>
     </header>
