@@ -19,7 +19,9 @@ const Home = () => {
     <>
       <Hero/>
       <Tech/>
+      <hr />
       <Services data={data}/>
+      
 
     </>
   )

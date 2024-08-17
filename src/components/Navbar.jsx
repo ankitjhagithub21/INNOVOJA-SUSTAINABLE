@@ -8,14 +8,16 @@ const Navbar = () => {
   const [menu, setMenu] = useState(false);
 
   return (
-    <header className='bg-[#242941] text-white px-5 py-4 fixed top-0 shadow-lg z-50 w-full left-0'>
-      <nav className='container mx-auto flex lg:flex-row md:flex-col flex-row gap-2 flex-wrap items-center justify-between'>
+    <header className='bg-white text-[#242941] md:px-5 px-2 lg:py-4 py-1 fixed top-0 shadow-lg z-50 w-full left-0'>
+      <nav className='container mx-auto flex lg:flex-row md:flex-col flex-row gap-2 items-center justify-between'>
         <Link to="/">
           <img
-            src="https://ionomr.com/wp-content/uploads/2020/09/Ionomr-Current-logo-white.png"
+            src="./logo.png"
             alt="logo"
             loading='lazy'
-            width={200}
+            
+
+            className='  w-52'
           />
         </Link>
 
@@ -26,8 +28,8 @@ const Navbar = () => {
               <Link
                 to={link.path}
                 className={`${
-                  location.pathname === link.path && 'bg-[#F4965D]' 
-                } px-3 py-1 rounded-full`}
+                  location.pathname === link.path ? 'bg-[#F4965D]' 
+                : 'hover:bg-[#F4965D] hover:text-white'} px-4 py-2 mx-1 rounded-full `}
                 onClick={() => setMenu(false)}
               >
                 {link.name}
@@ -36,7 +38,7 @@ const Navbar = () => {
           ))}
         </ul>
 
-        <button className='px-4 py-2 bg-[#F4965D] rounded-full md:block hidden'>Get More Info</button>
+        <button className='px-4 py-2 bg-[#F4965D]  rounded-full md:block hidden hover:bg-[#242941] hover:text-white'>Get More Info</button>
         
         {/* Mobile Menu Icon */}
         <IoIosMenu
@@ -49,7 +51,7 @@ const Navbar = () => {
         <div
           className={`${
             menu ? 'h-screen' : 'h-0 overflow-hidden'
-          } top-0 w-full left-0 bg-[#90B0CF] flex flex-col gap-5 items-center justify-center transition-all duration-500 absolute md:hidden z-50  `}
+          } top-0 w-full left-0 bg-[#81b7ec] flex text-white flex-col gap-5 items-center justify-center transition-all duration-500 absolute md:hidden z-50  `}
         >
           <IoIosClose
             className='absolute top-3 right-3 cursor-pointer'
