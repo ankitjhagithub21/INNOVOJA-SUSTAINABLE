@@ -16,7 +16,7 @@ const Applications = () => {
     : applications.filter(app => app.category === selectedCategory);
 
   return (
-    <section className='py-24 lg:px-5 px-0'>
+    <section className='lg:px-5 px-0'>
       <h1 className='lg:text-5xl text-3xl font-bold text-center lg:mt-10 md:mt-20 mt-0'>Applications</h1>
       
       <div className='flex flex-wrap items-center justify-center my-10 md:gap-5 gap-2 text-lg'>
