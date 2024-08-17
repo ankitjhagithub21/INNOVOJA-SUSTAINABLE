@@ -3,7 +3,7 @@ import React from 'react'
 
 const Media = () => {
   return <section className='py-24'>
-    <h1 className='lg:text-5xl text-3xl font-semibold text-center my-10'>News & Media</h1>
+    <h1 className='lg:text-5xl text-3xl font-semibold text-center mb-10 lg:mt-10 md:mt-24 mt-10'>News & Media</h1>
     <div className='container mx-auto flex flex-wrap'>
      
       <div className='lg:w-1/3 md:w-1/2 w-full p-5 hover:-translate-y-1.5 cursor-pointer duration-500'>

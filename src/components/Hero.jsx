@@ -13,7 +13,7 @@ const Hero = () => {
             ></video>
 
             {/* Overlay */}
-            <div className='absolute top-0 left-0 w-full h-full bg-black opacity-40'></div>
+           
 
             <div className='relative flex flex-col gap-3 py-24 md:mt-0 mt-12 text-white z-10 text-center hover:scale-105 transition'>
                 <h1 className='lg:text-6xl md:text-3xl text-xl lowercase font-bold '>
