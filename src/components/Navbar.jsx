@@ -36,7 +36,7 @@ const Navbar = () => {
           ))}
         </ul>
 
-        <button className='px-4 py-2 bg-[#F4965D]  rounded-full md:block hidden hover:bg-[#242941] hover:text-white'>Get More Info</button>
+        <Link to={"/get-more-info"} className='px-4 py-2 bg-[#F4965D]  rounded-full md:block hidden hover:bg-[#242941] hover:text-white'>Get More Info</Link>
         
         {/* Mobile Menu Icon */}
         <IoIosMenu

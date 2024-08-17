@@ -8,6 +8,10 @@ import "./App.css"
 import NotFound from './pages/NotFound'
 import Technology from './pages/Technology'
 import Applications from './pages/Applications'
+import Resources from './pages/Resources'
+import Media from './pages/Media'
+import HowToBuy from './pages/HowToBuy'
+import MoreInfo from './pages/MoreInfo'
 
 const App = () => {
   return (
@@ -18,6 +22,10 @@ const App = () => {
         <Route path='/about' Component={About}/>
         <Route path='/technology' Component={Technology}/>
         <Route path='/applications' Component={Applications}/>
+        <Route path='/resources' Component={Resources}/>
+        <Route path='/media' Component={Media}/>
+        <Route path='/how-to-buy' Component={HowToBuy}/>
+        <Route path='/get-more-info' Component={MoreInfo}/>
         <Route path='/*' Component={NotFound}/>
       </Routes>
       <Footer/>
