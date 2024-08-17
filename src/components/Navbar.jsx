@@ -60,7 +60,7 @@ const Navbar = () => {
             <Link
               key={link.id}
               to={link.path}
-              className={`text-2xl px-6 rounded-full py-2 font-bold ${
+              className={`text-xl px-6 rounded-full py-2 font-bold ${
                 location.pathname === link.path && 'bg-[#F4965D]' 
               }`}
               onClick={() => setMenu(false)}
@@ -68,6 +68,7 @@ const Navbar = () => {
               {link.name}
             </Link>
           ))}
+           <Link to={"/get-more-info"} onClick={()=>setMenu(false)} className='px-4 py-2 bg-[#F4965D]  rounded-full  hover:bg-[#242941] hover:text-white'>Get More Info</Link>
         </div>
       </nav>
     </header>
