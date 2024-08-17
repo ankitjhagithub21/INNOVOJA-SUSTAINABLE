@@ -8,7 +8,7 @@ const Footer = () => {
 
   return (
     <footer>
-      <div className="container mx-auto md:px-5 px-3 py-12 flex flex-wrap border-b">
+      <div className="container mx-auto  py-12 flex flex-wrap border-b">
         <div className='flex flex-col gap-5 lg:w-1/3 md:w-1/2 w-full p-5'>
           <img src="./logo.png" alt="" width={200} className='bg-white' />
           <p className='text-sm text-gray-400'>Ionomr Innovations develops the world’s most advanced ion-exchange membranes & polymers.</p>

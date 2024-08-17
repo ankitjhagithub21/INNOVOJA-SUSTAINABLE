@@ -8,6 +8,7 @@ const Applications = () => {
 
   useEffect(() => {
     document.title = "Applications - Innovoja Sustainable";
+    window.scrollTo(0,0)
   }, []);
 
   const filteredApplications = selectedCategory === "All"
@@ -22,7 +23,7 @@ const Applications = () => {
         {buttons.map((button, index) => (
           <button 
             key={index}
-            className={`px-6 py-2 rounded-full ${
+            className={`px-6 py-2 lg:text-lg text-sm rounded-full ${
               selectedCategory === button ? 'bg-[#F4965D] text-white' : 'bg-gray-200 text-black'
             }`}
             onClick={() => setSelectedCategory(button)}
