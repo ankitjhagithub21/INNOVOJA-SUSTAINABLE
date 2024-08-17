@@ -28,7 +28,10 @@ const Navbar = () => {
                 className={`${
                   location.pathname === link.path ? 'bg-[#F4965D] text-white'  
                 : 'hover:bg-[#F4965D] hover:text-white'} px-4 py-2 mx-1 rounded-full `}
-                onClick={() => setMenu(false)}
+                onClick={() => {
+                  setMenu(false) 
+                  window.scrollTo(0,0)
+                }}
               >
                 {link.name}
               </Link>
@@ -36,13 +39,17 @@ const Navbar = () => {
           ))}
         </ul>
 
-        <Link to={"/get-more-info"} className='px-4 py-2 bg-[#F4965D]  rounded-full md:block hidden hover:bg-[#242941] hover:text-white'>Get More Info</Link>
+        <Link to={"/get-more-info"} onClick={()=>{
+          window.scrollTo(0,0)
+        }} className='px-4 py-2 bg-[#F4965D]  rounded-full md:block hidden hover:bg-[#242941] hover:text-white'>Get More Info</Link>
         
         {/* Mobile Menu Icon */}
         <IoIosMenu
           className='md:hidden block cursor-pointer'
           size={30}
-          onClick={() => setMenu(true)}
+          onClick={() => {
+            setMenu(true)
+          }}
         />
         
         {/* Mobile Menu */}
@@ -63,12 +70,18 @@ const Navbar = () => {
               className={`text-xl px-6 rounded-full py-2 font-bold ${
                 location.pathname === link.path && 'bg-[#F4965D]' 
               }`}
-              onClick={() => setMenu(false)}
+              onClick={() => {
+                setMenu(false)
+                window.scrollTo(0,0)
+              }}
             >
               {link.name}
             </Link>
           ))}
-           <Link to={"/get-more-info"} onClick={()=>setMenu(false)} className='px-4 text-xl  font-bold py-2 bg-[#242941]  rounded-full  hover:bg-[#242941] hover:text-white'>Get More Info</Link>
+           <Link to={"/get-more-info"} onClick={()=>{
+            setMenu(false)
+            window.scrollTo(0,0)
+           }} className='px-4 text-xl  font-bold py-2 bg-[#242941]  rounded-full  hover:bg-[#242941] hover:text-white'>Get More Info</Link>
         </div>
       </nav>
     </header>

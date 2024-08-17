@@ -1,13 +1,79 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 const MoreInfo = () => {
+  useEffect(()=>{
+    document.title = "Get More Info - Innovoja Sustainable"
+   
+  },[])
   return (
     <section className='py-24'>
-     <div className='lg:w-2/3 mx-auto py-12 px-5'>
-     <h1 className='md:text-5xl text-3xl font-bold mt-5 text-center'>Get More Info</h1>
-      <p className='text-center mt-2'>Please complete the following form so we can provide you with the most relevant information for your application.
-      Note: we require company email contact. Personal email address may not be accepted.</p>
-     </div>
+      <div className='lg:w-2/3 mx-auto py-12 px-5'>
+        <h1 className='md:text-5xl text-3xl font-bold md:mt-5 mt-0 text-center'>Get More Info</h1>
+        <p className='text-center mt-4'>Please complete the following form so we can provide you with the most relevant information for your application.
+          Note: we require company email contact. Personal email address may not be accepted.</p>
+        
+      </div>
+      <div className='w-full bg-[#EDCB91] px-5'>
+  <div className='grid lg:grid-cols-2  grid-cols-1 gap-5 py-10 lg:w-2/3 w-full mx-auto'>
+    <input 
+      type="text" 
+      placeholder='First name*' 
+      className='w-full py-4 px-6  rounded-full' 
+      required
+    />
+    <input 
+      type="text" 
+      placeholder='Last name*' 
+      className='w-full py-4 px-6 rounded-full' 
+      required
+    />
+    <input 
+      type="email" 
+      placeholder='Company Email*' 
+      className='w-full py-4 px-6 rounded-full' 
+      required
+    />
+    <input 
+      type="number"  
+      placeholder='Phone*' 
+      className='w-full py-4 px-6 rounded-full' 
+      required
+    />
+    <input 
+      type="text" 
+      placeholder='Organization*' 
+      className='w-full py-4 px-6 rounded-full' 
+      required
+    />
+    <input 
+      type="text" 
+      placeholder='Position*' 
+      className='w-full py-4 px-6 rounded-full' 
+      required
+    />
+    <input 
+      type="text" 
+      placeholder='Address*' 
+      className='w-full py-4 px-6 rounded-full' 
+      required
+    />
+    <input 
+      type="text" 
+      placeholder='Which Product*' 
+      className='w-full py-4 px-6 rounded-full' 
+      required
+    />
+    <textarea 
+      name="" 
+      id="" 
+      rows={8} 
+      className='w-full py-4 px-6 rounded-xl resize-none col-span-2 hover:bg-[#242941]' 
+      placeholder="Describe your application further: stack dimensions, quantity needed, scale-up timeline, etc.*" 
+      required
+    ></textarea>
+  </div>
+</div>
+
     </section>
   )
 }

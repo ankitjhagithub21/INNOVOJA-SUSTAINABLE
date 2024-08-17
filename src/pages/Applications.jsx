@@ -8,7 +8,7 @@ const Applications = () => {
 
   useEffect(() => {
     document.title = "Applications - Innovoja Sustainable";
-    window.scrollTo(0,0)
+   
   }, []);
 
   const filteredApplications = selectedCategory === "All"

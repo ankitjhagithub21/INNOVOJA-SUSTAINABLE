@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const About = () => {
   useEffect(() => {
     document.title = "About Us - Innovoja Sustainable";
-    window.scrollTo(0,0)
+   
   }, []);
 
   return (
