@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Services from '../components/Services'
 
 const Technology = () => {
@@ -6,6 +6,9 @@ const Technology = () => {
     heading: "Technology",
     para: ""
   }
+  useEffect(()=>{
+    document.title = "Our Technology - Innovoja sustainable"
+  },[])
 
   return (
     <section className='py-24'>
