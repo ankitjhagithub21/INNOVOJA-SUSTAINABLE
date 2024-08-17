@@ -11,7 +11,7 @@ const About = () => {
     <section>
       <div className='about py-24'>
         <div className='about-content lg:w-1/2 lg:ml-[10%] ml-0 p-5 text-white font-light lg:text-lg w-full h-full flex flex-col gap-5 items-start justify-center'>
-          <h1 className='lg:text-5xl text-3xl font-bold mt-10'>About Us</h1>
+          <h1 className='lg:text-5xl text-3xl font-bold md:mt-24 lg:mt-12 mt-5'>About Us</h1>
           <p>
             Ionomr develops and markets ion-exchange membrane and polymer solutions for clean technology solutions including fuel cells, hydrogen production, and a range of energy storage applications.
           </p>
