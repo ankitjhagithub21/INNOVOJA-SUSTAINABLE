@@ -15,20 +15,18 @@ const Navbar = () => {
             src="./logo.png"
             alt="logo"
             loading='lazy'
-            
-
-            className='  w-52'
+            className=' w-52'
           />
         </Link>
 
         {/* Desktop Menu */}
         <ul className='md:flex hidden items-center'>
-          {links.map((link, index) => (
+          {links.map((link) => (
             <li key={link.id}>
               <Link
                 to={link.path}
                 className={`${
-                  location.pathname === link.path ? 'bg-[#F4965D]' 
+                  location.pathname === link.path ? 'bg-[#F4965D] text-white'  
                 : 'hover:bg-[#F4965D] hover:text-white'} px-4 py-2 mx-1 rounded-full `}
                 onClick={() => setMenu(false)}
               >
