@@ -8,9 +8,9 @@ const Footer = () => {
 
   return (
     <footer>
-      <div className="container mx-auto px-5 py-12 flex flex-wrap border-b">
+      <div className="container mx-auto md:px-5 px-3 py-12 flex flex-wrap border-b">
         <div className='flex flex-col gap-5 lg:w-1/3 md:w-1/2 w-full p-5'>
-          <img src="https://ionomr.com/wp-content/uploads/2020/09/Ionomr-Current-logo-white.png" alt="" width={200} />
+          <img src="./logo.png" alt="" width={200} className='bg-white' />
           <p className='text-sm text-gray-400'>Ionomr Innovations develops the world’s most advanced ion-exchange membranes & polymers.</p>
           <div className='flex gap-3 items-center justify-start'>
             <a href='#' target='_blank' className='bg-[#F4965D] rounded-full p-3 text-[#242941] hover:bg-gray-200 transition duration-300'>
