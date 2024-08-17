@@ -12,7 +12,7 @@ const Services = ({data}) => {
           <div className='bg-[#F4965D] p-5 flex flex-col items-start  gap-5'>
           <h2 className='hover:text-[#2A304B] cursor-pointer font-bold text-xl items-start transition duration-500'>Aemion+™</h2>
           <p>The most durable and high-performance Anion Exchange Membrane (AEM) on the market – unlocks high temperature alkaline electrochemistry which increases efficiency and decreases capital costs (CAPEX).</p>
-          <button className='px-4 py-2 bg-[#2A304B] hover:bg-[#7DA2C7] transition duration-500 rounded-full'>Learn more</button>
+          <button className='px-4 py-2 bg-[#2A304B] hover:bg-[#7DA2C7] hover:text-[#2A3048] transition duration-300 rounded-full'>Learn more</button>
           </div>
       </div>
       
@@ -21,7 +21,7 @@ const Services = ({data}) => {
           <div className='bg-[#f3c982] p-5 flex flex-col items-start  gap-5'>
           <h2 className='hover:text-[#2A304B] cursor-pointer font-bold text-xl items-start transition duration-500'>Pemion™</h2>
           <p>Breakthrough hydrocarbon Proton Exchange Membrane (PEM) – provides considerably higher performance, durability and lower gas crossover while eliminating environmental concerns of Fluorine.</p>
-          <button className='px-4 py-2 bg-[#2A304B] hover:bg-[#7DA2C7] transition duration-500 rounded-full'>Learn more</button>
+          <button className='px-4 py-2 bg-[#2A304B] hover:bg-[#7DA2C7] hover:text-[#2A3048] transition duration-300 rounded-full'>Learn more</button>
           </div>
       </div>
     </div>
