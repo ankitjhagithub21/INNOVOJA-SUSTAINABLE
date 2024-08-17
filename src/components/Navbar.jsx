@@ -8,7 +8,7 @@ const Navbar = () => {
   const [menu, setMenu] = useState(false);
 
   return (
-    <header className='bg-white text-[var(--clr-dark)] md:px-5 px-2 lg:py-4 py-2 fixed top-0 shadow-lg z-50 w-full left-0'>
+    <header className='bg-white text-[var(--clr-dark)] md:px-5 px-2 py-2 fixed top-0 shadow-lg z-50 w-full left-0'>
       <nav className='container mx-auto flex lg:flex-row md:flex-col flex-row gap-2 items-center justify-between'>
         <Link to="/">
           <img
@@ -27,9 +27,9 @@ const Navbar = () => {
                 to={link.path}
                 className={`${
                   location.pathname === link.path 
-                    ? 'bg-[var(--clr-orange)] text-white'  
+                    ? 'bg-[var(--clr-orange)]  text-white'  
                     : 'hover:bg-[var(--clr-orange)] hover:text-white'
-                } px-4 py-2 mx-1 rounded-full`}
+                } px-3 py-2  mx-1 rounded-full`}
                 onClick={() => {
                   setMenu(false);
                   window.scrollTo(0, 0);

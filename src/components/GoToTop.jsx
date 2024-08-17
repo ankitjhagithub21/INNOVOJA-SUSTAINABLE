@@ -6,7 +6,7 @@ const GoToTop = () => {
 
   useEffect(() => {
     const toggleVisibility = () => {
-      if (window.scrollY > 200) { // Show button after scrolling down 200px
+      if (window.scrollY > 200) { 
         setIsVisible(true);
       } else {
         setIsVisible(false);
@@ -14,10 +14,6 @@ const GoToTop = () => {
     };
 
     window.addEventListener('scroll', toggleVisibility);
-
-    return () => {
-      window.removeEventListener('scroll', toggleVisibility);
-    };
   }, []);
 
   return (
