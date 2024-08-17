@@ -52,7 +52,9 @@ const Footer = () => {
         
           {
             links.map((link)=>{
-              return <Link to={link.path} key={link.id} className='hover:text-[#F4965D] text-gray-400'>{link.name}</Link>
+              return <Link to={link.path} key={link.id} onClick={()=>{
+                window.scrollTo(0,0)
+              }} className='hover:text-[#F4965D] text-gray-400'>{link.name}</Link>
             })
           }
          </div>
