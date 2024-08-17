@@ -13,14 +13,14 @@ const Technology = () => {
 
   return (
     <section className='py-24'>
-      <h1 className='md:text-2xl text-lg text-[#f4965d] text-center lg:mt-12 md:mt-24 font-bold'>Cutting Edge</h1>
+      <h1 className='md:text-2xl text-lg text-[var(--clr-orange)] text-center lg:mt-12 md:mt-24 font-bold'>Cutting Edge</h1>
       <Services data={data} />
       <div className='container mx-auto flex flex-wrap items-center'>
         <div className='md:w-1/2 w-full md:block hidden'>
           <img src="https://ionomr.com/wp-content/uploads/2018/10/ionomr-advantage-1-e1540335064720.jpg?id=855" alt="" />
         </div>
         <div className='md:w-1/2 w-full flex flex-col gap-5 lg:p-10 p-5'>
-          <h2 className='text-[#F4965D]'>Our Technology</h2>
+          <h2 className='text-[var(--clr-orange)]'>Our Technology</h2>
           <h1 className=' text-4xl font-bold'>Ionomr's Advantage</h1>
           <p>Ionomr’s game changing membrane and polymer products are poised to take advantage of near-term growth opportunities in the burgeoning clean-tech sector thanks to their high efficiency, durability and cost-effectiveness.</p>
           <p>Produced using hydrocarbon materials and a revolutionary polymer structure, Ionomr’s polymer-based solutions avoid a vast range of environmental problems associated with the production, use and disposal of fluorine-containing polymers predominantly used in clean technologies today.

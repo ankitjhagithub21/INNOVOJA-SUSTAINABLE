@@ -12,7 +12,7 @@ const Tech = () => {
                     <li>Conversion of CO2 to synthetic fuels</li>
                     <li>Onsite recovery of chemicals for heavy industry – lithium, mining and electronics</li>
                 </ul>
-                <p className='mt-10'>Explore <Link to="/applications" className='hover:underline text-[#F4965D]'>our Applications Hub</Link> to learn more about specific system use.</p>
+                <p className='mt-10'>Explore <Link to="/applications" className='hover:underline text-[var(--clr-orange)]'>our Applications Hub</Link> to learn more about specific system use.</p>
              
             </div>
             <div className='container mx-auto text-center flex flex-wrap font-bold lg:text-3xl md:text-2xl text-xl lg:p-5 p-0'>
@@ -24,7 +24,7 @@ const Tech = () => {
                     <img src="https://ionomr.com/wp-content/uploads/2018/10/chlor-alkali-process-a-740x416.jpg" alt="" className='hover:scale-105 cursor-pointer transition duration-500' />
                     <h1 className='mt-5'>Chemicals</h1>
                 </div>
-                <Link className='px-6 py-2 bg-[#F4965D] rounded-full leading-relaxed mx-auto text-sm' to={"/applications"}>View our Applications</Link>
+                <Link className='px-6 py-2 bg-[#F4965D] rounded-full leading-relaxed mx-auto text-sm hover:bg-[var(--clr-sky)] hover:text-white' to={"/applications"}>View our Applications</Link>
             </div>
            
         </section>

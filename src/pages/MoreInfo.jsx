@@ -73,7 +73,7 @@ const MoreInfo = () => {
             placeholder="Describe your application further: stack dimensions, quantity needed, scale-up timeline, etc.*" 
             required
           ></textarea>
-          <button type='submit' className='px-4 py-2 w-fit bg-[#F4965D] text-white rounded-full'>Submit</button>
+          <button type='submit' className='px-4 py-2 w-fit bg-[var(--clr-dark)] hover:bg-[var(--clr-orange)] text-white rounded-full'>Submit</button>
         </div>
       </div>
     </section>

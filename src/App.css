@@ -3,12 +3,19 @@
     font-family: "Chivo", sans-serif;
     outline: none;
 }
+:root{
+    --clr-dark:#242941;
+    --clr-orange:#F4965D;
+    --clr-sky:#81B7EC;
+    --clr-light:#ecf0f1;
+}
+
 html,body{
     scroll-behavior: smooth;
 }
 body{
-    background-color: #242941;
-    color: white;
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
    
 }
 /* about page */
@@ -36,12 +43,13 @@ body{
     position: relative;
     z-index: 2; 
 }
+/*get more info page */
 
 input,textarea{
     background-color: #2E2D32;
 }
 input:hover{
-    background-color: #242941;
+    background-color: var(--clr-dark);
 }
 
 

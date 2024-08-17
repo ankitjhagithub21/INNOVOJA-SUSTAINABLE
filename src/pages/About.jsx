@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 const About = () => {
   useEffect(() => {
     document.title = "About Us - Innovoja Sustainable";
-   
   }, []);
 
   return (
@@ -22,15 +21,15 @@ const About = () => {
             The Company's R&D and manufacturing facilities are based in Vancouver, Canada – the worldwide hub for fuel cell research and development.
           </p>
           <div className='flex items-center gap-5 flex-wrap'>
-            <Link className='px-6 py-2 bg-[#7DA2C7] rounded-full hover:bg-[#F4965D]' to={"/about/team"}>Our Team</Link>
-            <button className='px-6 py-2 bg-[#7DA2C7] rounded-full hover:bg-[#F4965D]'>Board & Advisors</button>
+            <Link className='px-6 py-2 bg-[var(--clr-sky)] rounded-full hover:bg-[var(--clr-orange)]' to={"/about/team"}>Our Team</Link>
+            <button className='px-6 py-2 bg-[var(--clr-sky)] rounded-full hover:bg-[var(--clr-orange)]'>Board & Advisors</button>
           </div>
         </div>
       </div>
       <div className='py-12 px-5 text-center'>
-        <h1 className='lg:text-5xl text-3xl font-bold '>Our Place in the Value Chain</h1>
+        <h1 className='lg:text-5xl text-3xl font-bold'>Our Place in the Value Chain</h1>
         <img src="https://ionomr.com/wp-content/uploads/2018/11/ionomr-value-chain-transparent.png" loading='lazy' alt="" className='mx-auto my-10' />
-        <Link to={"/technology"} className='px-6 py-2 bg-white text-[#242941] rounded-full hover:bg-[#F4965D] hover:text-white mx-auto'>Learn about our tech</Link>
+        <Link to={"/technology"} className='px-6 py-2 bg-white text-[var(--clr-dark)] rounded-full hover:bg-[var(--clr-orange)] hover:text-white mx-auto'>Learn about our tech</Link>
       </div>
     </section>
   );
