@@ -56,6 +56,7 @@ const Footer = () => {
                 </Link>
               );
             })}
+             <Link to="/contact" className='hover:text-[var(--clr-orange)] text-gray-400'>Contact Us</Link>
           </div>
         </div>
       </div>
