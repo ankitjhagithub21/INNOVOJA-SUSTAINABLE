@@ -14,6 +14,7 @@ import HowToBuy from './pages/HowToBuy'
 import MoreInfo from './pages/MoreInfo'
 import GoToTop from './components/GoToTop'
 import Contact from './pages/Contact'
+import Team from './pages/Team'
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
       <Routes>
         <Route path='/' Component={Home}/>
         <Route path='/about' Component={About}/>
+        <Route path='/about/team' Component={Team}/>
         <Route path='/technology' Component={Technology}/>
         <Route path='/applications' Component={Applications}/>
         <Route path='/resources' Component={Resources}/>

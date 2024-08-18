@@ -12,7 +12,7 @@ const Navbar = () => {
       <nav className='container mx-auto flex lg:flex-row md:flex-col flex-row gap-2 items-center justify-between'>
         <Link to="/">
           <img
-            src="./logo.png"
+            src="/logo.png"
             alt="logo"
             loading='lazy'
             className='w-48'
