@@ -4,6 +4,7 @@ const ContactForm = () => {
     return (
         <div className='lg:w-2/3 lg:mx-auto bg-white mt-10 rounded-lg shadow-lg mx-5'>
             <div className='flex flex-col p-5 gap-3'>
+                <p className='text-lg text-[var(--clr-dark)] font-bold'>Get in Touch</p>
                 <h1 className='mb-5 font-bold text-3xl text-[var(--clr-dark)]'>How Can We Help?</h1>
                 <input
                     type="text"
@@ -18,17 +19,12 @@ const ContactForm = () => {
                     required
                 />
                 <input
-                    type="number"
+                    type="text"
                     placeholder='Number*'
                     className='w-full py-4 px-6 rounded-full'
                     required
                 />
-                <input
-                    type="text"
-                    placeholder='Organization*'
-                    className='w-full py-4 px-6 rounded-full'
-                    required
-                />
+              
 
                 <textarea
                     name=""
@@ -38,7 +34,7 @@ const ContactForm = () => {
                     placeholder="Describe your application further: stack dimensions, quantity needed, scale-up timeline, etc.*"
                     required
                 ></textarea>
-                <button type='submit' className='px-4 py-2 w-fit bg-[var(--clr-dark)] hover:bg-[var(--clr-orange)] text-white rounded-full'>Submit</button>
+                <button type='submit' className='px-4 py-2 w-fit bg-[var(--clr-orange)] hover:bg-[var(--clr-dark)] text-white rounded-full'>Submit</button>
 
             </div>
         </div>

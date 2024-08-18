@@ -47,7 +47,7 @@ body{
 
 input,textarea{
     background-color: #2E2D32;
-}
+}z
 input:hover{
     background-color: var(--clr-dark);
 }
@@ -64,5 +64,6 @@ input:hover{
     background:url(https://images.pexels.com/photos/3735757/pexels-photo-3735757.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1) ;
     background-size:cover;
     background-position: center;
+    background-attachment: fixed;
 }
 
