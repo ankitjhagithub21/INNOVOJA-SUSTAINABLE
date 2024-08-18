@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    font-family: "Chivo", sans-serif;
+    outline: none;
+}
+:root{
+    --clr-dark:#242941;
+    --clr-orange:#F4965D;
+    --clr-sky:#81B7EC;
+    --clr-light:#ecf0f1;
+}
+
+
+.form{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+button{
+    transition: 0.5s;
+}
