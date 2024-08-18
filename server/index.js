@@ -11,7 +11,7 @@ const port = 3000
 
 app.use(express.json())
 app.use(cors({
-  origin:process.env.ORIGIN,
+  origin:[process.env.ORIGIN1,process.env.ORIGIN2],
   credentials:true
 }))
 
