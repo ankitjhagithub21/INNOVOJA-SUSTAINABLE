@@ -35,7 +35,7 @@ const Slider = ({ partners }) => {
       {
         partners.map((partner, index) => (
           <SwiperSlide key={index}>
-            <img src={partner} alt="partner" className='w-full object-contain' />
+            <img src={partner} alt="partner" className='w-full h-auto object-contain' />
           </SwiperSlide>
         ))
       }
