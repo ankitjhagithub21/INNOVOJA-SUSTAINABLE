@@ -7,13 +7,16 @@ const Slider = ({ partners }) => {
     <Swiper
       modules={[Autoplay]}  
       spaceBetween={50}
-      slidesPerView={3}
       breakpoints={{
-        640:{
-            slidesPerView:2,
-            spaceBetween:20
+      
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 30,
         },
-
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 50,
+        },
       }}
       speed={1000}
       autoplay={{ 
