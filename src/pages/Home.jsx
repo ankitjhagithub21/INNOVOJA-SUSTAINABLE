@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import Hero from '../components/Hero'
 import Tech from '../components/Tech'
 import Services from '../components/Services'
+import Partners from '../components/Partners'
 
 const Home = () => {
   const data = {
@@ -19,9 +20,8 @@ const Home = () => {
     <>
       <Hero/>
       <Tech/>
-      <hr />
       <Services data={data}/>
-      
+      <Partners/>
 
     </>
   )

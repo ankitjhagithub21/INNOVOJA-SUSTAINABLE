@@ -13,7 +13,7 @@ const Technology = () => {
 
   return (
     <section className='py-24'>
-      <h1 className='md:text-2xl text-lg text-[var(--clr-orange)] text-center lg:mt-12 md:mt-24 font-bold'>Cutting Edge</h1>
+     
       <Services data={data} />
       <div className='container mx-auto flex flex-wrap items-center'>
         <div className='md:w-1/2 w-full md:block hidden'>

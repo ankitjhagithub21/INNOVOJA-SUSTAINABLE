@@ -20,10 +20,10 @@ const About = () => {
           <p>
             The Company's R&D and manufacturing facilities are based in Vancouver, Canada – the worldwide hub for fuel cell research and development.
           </p>
-          <div className='flex items-center gap-5 flex-wrap'>
+        
             <Link className='px-6 py-2 bg-[var(--clr-sky)] rounded-full hover:bg-[var(--clr-orange)]' to={"/about/team"}>Our Team</Link>
-            <button className='px-6 py-2 bg-[var(--clr-sky)] rounded-full hover:bg-[var(--clr-orange)]'>Board & Advisors</button>
-          </div>
+           
+         
         </div>
       </div>
       <div className='py-12 px-5 text-center'>
