@@ -60,7 +60,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <p className='p-10 text-center'>Innovoja sustainable Inc. © 2024. All rights reserved.</p>
+      <p className='p-10 text-center md:text-left'>Innovoja sustainable Inc. © 2024. All rights reserved.</p>
     </footer>
   );
 }

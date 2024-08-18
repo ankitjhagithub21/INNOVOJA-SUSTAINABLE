@@ -13,8 +13,6 @@
 html,body{
     scroll-behavior: smooth;
 }
-
-
 body::-webkit-scrollbar {
 	width: 7px;
     background-color: white;
@@ -24,6 +22,8 @@ body::-webkit-scrollbar-thumb {
 	border-radius: 10px;
 	background-color:var(--clr-dark);
 }
+
+
 
 body{
     background-color: var(--clr-dark);

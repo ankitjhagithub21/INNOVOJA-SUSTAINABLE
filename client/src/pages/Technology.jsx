@@ -16,10 +16,10 @@ const Technology = () => {
      
       <Services data={data} />
       <div className='container mx-auto flex flex-wrap items-center'>
-        <div className='md:w-1/2 w-full md:block hidden'>
+        <div className='lg:w-1/2 w-full md:block hidden'>
           <img src="https://ionomr.com/wp-content/uploads/2018/10/ionomr-advantage-1-e1540335064720.jpg?id=855" alt="" />
         </div>
-        <div className='md:w-1/2 w-full flex flex-col gap-5 lg:p-10 p-5'>
+        <div className='lg:w-1/2 w-full flex flex-col gap-5 lg:p-10 p-5'>
           <h2 className='text-[var(--clr-orange)]'>Our Technology</h2>
           <h1 className=' text-4xl font-bold'>Ionomr's Advantage</h1>
           <p>Ionomr’s game changing membrane and polymer products are poised to take advantage of near-term growth opportunities in the burgeoning clean-tech sector thanks to their high efficiency, durability and cost-effectiveness.</p>
