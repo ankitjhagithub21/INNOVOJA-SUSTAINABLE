@@ -10,11 +10,20 @@ const Slider = ({ partners }) => {
       slidesPerView={3}
       speed={1000}
       autoplay={{ 
-        delay: 1500,  
-        disableOnInteraction: true, 
+        delay: 1000,  
+        
       }}
       loop={true}  
       grabCursor={true} 
+      onSwiper={(swiper) => {
+        swiper.el.addEventListener('mouseenter', () => {
+          swiper.autoplay.stop();
+        });
+
+        swiper.el.addEventListener('mouseleave', () => {
+          swiper.autoplay.start();
+        });
+      }}
     >
       {
         partners.map((partner, index) => (
