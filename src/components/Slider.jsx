@@ -8,9 +8,16 @@ const Slider = ({ partners }) => {
       modules={[Autoplay]}  
       spaceBetween={50}
       slidesPerView={3}
+      breakpoints={{
+        640:{
+            slidesPerView:2,
+            spaceBetween:20
+        },
+
+      }}
       speed={1000}
       autoplay={{ 
-        delay: 1000,  
+        delay: 1500,  
         
       }}
       loop={true}  
