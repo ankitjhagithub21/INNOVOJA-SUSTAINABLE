@@ -27,9 +27,9 @@ const Navbar = () => {
                 to={link.path}
                 className={`${
                   location.pathname === link.path 
-                    ? 'bg-[var(--clr-orange)]  text-white'  
+                    ? 'bg-[var(--clr-orange)] text-white'  
                     : 'hover:bg-[var(--clr-orange)] hover:text-white'
-                } px-3 py-2  mx-1 rounded-full`}
+                } px-3 py-2 mx-1 rounded-full`}
                 onClick={() => {
                   setMenu(false);
                   window.scrollTo(0, 0);
@@ -63,8 +63,8 @@ const Navbar = () => {
         {/* Mobile Menu */}
         <div
           className={`${
-            menu ? 'h-screen' : 'h-0 overflow-hidden'
-          } top-0 w-full left-0 bg-[var(--clr-sky)] flex text-white flex-col gap-5 items-center justify-center transition-all duration-500 absolute md:hidden z-50`}
+            menu ? 'translate-y-0' : '-translate-y-full'
+          } fixed inset-0 bg-[var(--clr-sky)] text-white flex flex-col gap-5 items-center justify-center transition-transform duration-500 ease-in-out md:hidden z-50`}
         >
           <IoIosClose
             className='absolute top-3 right-3 cursor-pointer'
@@ -75,7 +75,7 @@ const Navbar = () => {
             <Link
               key={link.id}
               to={link.path}
-              className={`text-xl px-6 rounded-full py-2 font-bold ${
+              className={`text-xl px-6 py-2 font-bold rounded-full ${
                 location.pathname === link.path && 'bg-[var(--clr-orange)]'
               }`}
               onClick={() => {
@@ -92,7 +92,7 @@ const Navbar = () => {
               setMenu(false);
               window.scrollTo(0, 0);
             }}
-            className='px-4 text-xl font-bold py-2 bg-[var(--clr-dark)] rounded-full hover:bg-[var(--clr-dark)] hover:text-white'
+            className='px-4 py-2 text-xl font-bold bg-[var(--clr-dark)] rounded-full hover:bg-[var(--clr-orange)] hover:text-white'
           >
             Get More Info
           </Link>
