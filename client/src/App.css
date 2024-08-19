@@ -79,5 +79,10 @@ input:hover{
     background-attachment: fixed;
 }
 
-
+.why-innovoja{
+    background-image: url(https://ionomr.com/wp-content/uploads/2018/10/ION_Photo_Product1_crop.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
   
