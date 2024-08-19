@@ -1,10 +1,12 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import Heading from '../components/Heading';
 
 const About = () => {
   useEffect(() => {
     document.title = "About Us - Innovoja Sustainable";
   }, []);
+
   const data = {
     title:"About Us",
     paragraphs : [
@@ -20,7 +22,7 @@ const About = () => {
     <section>
       <div className='about py-24'>
         <div className='about-content lg:w-1/2 lg:ml-[10%] ml-0 p-5 text-white font-light lg:text-lg w-full h-full flex flex-col gap-5 items-start justify-center'>
-          <h1 className='lg:text-5xl text-3xl font-bold md:mt-24 lg:mt-12 mt-5'>{data.title}</h1>
+        <Heading text={data.title}/>
 
           {
             data.paragraphs.map((para,index)=>{
@@ -33,7 +35,7 @@ const About = () => {
         </div>
       </div>
       <div className='py-12 px-5 text-center'>
-        <h1 className='lg:text-5xl text-3xl font-bold'>Our Place in the Value Chain</h1>
+     <Heading text={"Our Place in the Value Chain"}/>
         <img src="https://ionomr.com/wp-content/uploads/2018/11/ionomr-value-chain-transparent.png" loading='lazy' alt="" className='mx-auto my-10' />
         <Link to={"/technology"} className='px-6 py-2 bg-white text-[var(--clr-dark)] rounded-full hover:bg-[var(--clr-orange)] hover:text-white mx-auto'>Learn about our tech</Link>
       </div>

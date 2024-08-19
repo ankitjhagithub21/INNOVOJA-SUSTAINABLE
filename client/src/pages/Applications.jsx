@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import applications from '../data/applications';
+import Heading from '../components/Heading';
 
 const Applications = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -15,10 +16,10 @@ const Applications = () => {
     : applications.filter(app => app.category === selectedCategory);
 
   return (
-    <section className='lg:px-5 px-0 pt-32'>
-      <h1 className='lg:text-5xl text-3xl font-bold text-center mb-12 md:mt-10 lg:mt-0 mt-0'>Applications</h1>
+    <section className='lg:px-5 px-0 pt-32 text-center'>
+    <Heading text={"Applications"}/>
       
-      <div className='flex flex-wrap items-center justify-center md:gap-5 gap-2 text-lg'>
+      <div className='flex flex-wrap items-center justify-center md:gap-5 mt-12 gap-2 text-lg'>
         {buttons.map((button, index) => (
           <button 
             key={index}

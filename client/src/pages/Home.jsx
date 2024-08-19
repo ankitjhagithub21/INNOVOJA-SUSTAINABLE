@@ -5,10 +5,7 @@ import Services from '../components/Services'
 import Partners from '../components/Partners'
 
 const Home = () => {
-  const data = {
-    heading:"How Do We Do That?",
-    para:"By creating the most durable and innovative ion exchange membranes and polymers:"
-  }
+  
 
   useEffect(()=>{
    
@@ -20,7 +17,7 @@ const Home = () => {
     <>
       <Hero/>
       <Tech/>
-      <Services data={data}/>
+      <Services/>
       <Partners/>
 
     </>

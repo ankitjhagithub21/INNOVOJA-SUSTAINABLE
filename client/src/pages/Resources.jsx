@@ -2,6 +2,7 @@
 import { useEffect } from 'react';
 import AccordionItem from '../components/AccordionItem';
 import Overlay from '../components/Overlay';
+import Heading from '../components/Heading';
 
 
 
@@ -17,12 +18,14 @@ const Resources = () => {
         <div className='h-fit w-full flex flex-wrap items-start justify-center  mt-20  px-5  z-10'>
           <div className='lg:w-1/4 w-full'>
             <p className='text-[var(--clr-orange)] text-xl font-bold' >Resources</p>
-            <h1 className='lg:text-5xl text-3xl font-bold'>The <br /> Solutions <br /> Center</h1>
+          <Heading text={"The"}/>
+          <Heading text={"Solution"}/>
+          <Heading text={"Center"}/>
           </div>
           <div className='lg:w-3/4 w-full flex flex-col gap-5'>
           <p className='text-[var(--clr-orange)] text-xl font-bold' >Reference Design Tutorial
           </p>
-            <h1 className='lg:text-5xl text-3xl font-bold'>Introducing Ionomr Innovations' AEM Reference Design Kit</h1>
+           <Heading text={"Introducing Ionomr Innovations' AEM Reference Design Kit"}/>
           <p>AEM design is complex, time consuming, and redesign work is expensive.
             The following video gives step by step guidelines on how to activate our revolutionary membrane, assemble your test cell, and get to test insights accurately
             </p>

@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import Heading from '../components/Heading';
 
 const MoreInfo = () => {
   useEffect(() => {
@@ -7,9 +8,9 @@ const MoreInfo = () => {
 
   return (
     <section className='py-24'>
-      <div className='lg:w-2/3 mx-auto py-12 px-5'>
-        <h1 className='md:text-5xl text-3xl font-bold md:mt-5 mt-0 text-center'>Get More Info</h1>
-        <p className='text-center mt-4'>
+      <div className='lg:w-2/3 mx-auto py-12 px-5 text-center'>
+        <Heading text={"Get More Info"}/>
+        <p className='mt-4'>
           Please complete the following form so we can provide you with the most relevant information for your application.
           Note: we require company email contact. Personal email addresses may not be accepted.
         </p>

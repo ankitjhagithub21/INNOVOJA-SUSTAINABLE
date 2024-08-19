@@ -1,13 +1,14 @@
 import React, { useEffect } from 'react'
+import Heading from '../components/Heading'
 
 
 const Media = () => {
   useEffect(()=>{
     document.title ="Media - Innovoja Sustainable"
   },[])
-  return <section className='py-24'>
-    <h1 className='lg:text-5xl text-3xl font-semibold text-center mb-10 lg:mt-10 md:mt-24 mt-10'>News & Media</h1>
-    <div className='container mx-auto flex flex-wrap'>
+  return <section className='py-24 flex flex-col gap-10 text-center'>
+   <Heading text={"News & Media"}/>
+    <div className='container mx-auto flex flex-wrap text-left'>
      
       <div className='lg:w-1/3 md:w-1/2 w-full p-5 hover:-translate-y-1.5 cursor-pointer duration-500'>
        <div className='shadow-xl rounded-lg'>

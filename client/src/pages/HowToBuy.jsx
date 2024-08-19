@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import Overlay from '../components/Overlay'
 import {Link} from "react-router-dom"
+import Heading from '../components/Heading'
 
 
 const HowToBuy = () => {
@@ -12,7 +13,7 @@ const HowToBuy = () => {
     <section className='how-to-buy relative h-[70vh] w-full'>
         <Overlay/>
         <div className='lg:w-2/3 w-full h-full flex flex-col gap-5 p-5 relative z-40 justify-center mx-auto'>
-          <h1 className='lg:text-5xl text-3xl font-bold mt-20'>How to Buy</h1>
+          <Heading text={"How to Buy"}/>
           <p className='text-white text-lg tracking-wide'>Customers can make a purchase directly through Ionomr sales, as well as authorized sales representatives and distributors. Feel free to contact one of our trusted sales representatives below for your country/region, otherwise contact us below with your inquiry.</p>
         </div>
         

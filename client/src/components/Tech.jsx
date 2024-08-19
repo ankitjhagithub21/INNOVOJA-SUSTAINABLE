@@ -1,10 +1,11 @@
 import React from 'react'
 import { Link } from "react-router-dom"
+import Heading from './Heading'
 const Tech = () => {
     return (
         <section className='w-full py-5'>
             <div className="lg:w-2/3 w-full p-5 mx-auto flex flex-col gap-5">
-                <h1 className='lg:text-5xl text-3xl font-bold text-center'>Our Breakthrough Technology</h1>
+               <Heading text={"Our Breakthrough Technology"}/>
                 <p className='mb-10'>Ionomr has developed revolutionary ion exchange membrane technology that drastically improves efficiency and performance while minimizing cost and environmental impact:</p>
                 <ul className='list-disc flex flex-col gap-3'>
                     <li>Hydrogen generation to fuel the hydrogen economy</li>

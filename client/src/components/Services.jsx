@@ -1,11 +1,15 @@
-const Services = ({ data }) => {
+import Heading from "./Heading";
+
+const Services = () => {
   return (
     <section className='py-12 lg:px-5 px-0'>
       <div className='container mx-auto'>
-        <h1 className='lg:text-5xl text-3xl font-bold text-center'>
-          {data.heading}
-        </h1>
-        <p className='text-center my-10'>{data.para}</p>
+       <div className="text-center">
+       <Heading text={"How Do We Do That?"}/>
+        <p className='my-10'>
+        By creating the most durable and innovative ion exchange membranes and polymers:
+        </p>
+       </div>
 
         <div className='flex flex-wrap lg:w-2/3 w-full mx-auto'>
           <div className='md:w-1/2 w-full p-5'>

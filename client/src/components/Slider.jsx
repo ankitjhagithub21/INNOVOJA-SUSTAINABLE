@@ -5,6 +5,7 @@ import 'swiper/css';
 const Slider = ({ partners }) => {
   return (
     <Swiper
+     className='my-10'
       modules={[Autoplay]}  
       spaceBetween={50}
       breakpoints={{

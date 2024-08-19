@@ -1,4 +1,5 @@
 import React from 'react'
+import Heading from './Heading'
 
 const Hero = () => {
     return (
@@ -16,9 +17,7 @@ const Hero = () => {
            
 
             <div className='relative flex flex-col gap-3 py-24 md:mt-0 mt-12 text-white z-10 text-center hover:scale-105 transition'>
-                <h1 className='lg:text-6xl md:text-3xl text-xl lowercase font-bold '>
-                    INNOVOJA SUSTAINABLE SOLUTIONS
-                </h1>
+             <Heading text={"INNOVOJA SUSTAINABLE SOLUTIONS"}/>
                 <p className='lg:text-3xl text-sm'>
                     enables the global renewable transition with
                 </p>

@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { FaLinkedinIn } from 'react-icons/fa'
 import useFetchTeamMembers from '../hooks/useFetchTeamMembers'
+import Heading from '../components/Heading'
 
 const Team = () => {
   const members = useFetchTeamMembers()
@@ -8,12 +9,12 @@ const Team = () => {
     document.title = "Our Team - Innovoja Sustainable"
   },[])
   return (
-    <section>
-    <div className="container lg:px-5 px-0 py-24 mx-auto">
-    <h1 className="lg:text-5xl text-3xl  md:mt-20 lg:mt-5 mt-5 mb-5 text-center">
-          Our Team
-        </h1>
-      <div className="flex flex-wrap text-center">
+    <section className='py-24 text-center'>
+    <div className='my-10'>
+    <Heading text={"Our Team"}/>
+    </div>
+    
+      <div className="flex flex-wrap container mx-auto ">
       
        {
         members.map((member)=>{
@@ -34,7 +35,7 @@ const Team = () => {
        
        
       </div>
-    </div>
+    
   </section>
   
   )
