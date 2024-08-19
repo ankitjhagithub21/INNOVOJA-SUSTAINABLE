@@ -1,5 +1,6 @@
 import React from 'react'
 import Heading from './Heading'
+import Overlay from './Overlay'
 
 const Hero = () => {
     return (
@@ -14,9 +15,9 @@ const Hero = () => {
             ></video>
 
             {/* Overlay */}
-           
+           <Overlay/>
 
-            <div className='relative flex flex-col gap-3 py-24 md:mt-0 mt-12 text-white z-10 text-center hover:scale-105 transition'>
+            <div className='relative flex flex-col gap-3 px-5 py-24 md:mt-0 mt-12 text-white z-10 text-center hover:scale-105 transition'>
              <Heading text={"INNOVOJA SUSTAINABLE SOLUTIONS"}/>
                 <p className='lg:text-3xl text-sm'>
                     enables the global renewable transition with
