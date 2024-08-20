@@ -1,88 +1,92 @@
 @import url('https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&display=swap');
-*{
+
+* {
     font-family: "Chivo", sans-serif;
     outline: none;
 }
-:root{
-    --clr-dark:#242941;
-    --clr-orange:#F4965D;
-    --clr-sky:#81B7EC;
-    --clr-light:#ecf0f1;
+
+:root {
+    --clr-dark: #242941;
+    --clr-orange: #F4965D;
+    --clr-sky: #81B7EC;
+    --clr-light: #ecf0f1;
 }
 
-html,body{
+html, body {
     scroll-behavior: smooth;
 }
+
+body {
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+}
+
 body::-webkit-scrollbar {
-	width: 7px;
+    width: 7px;
     background-color: white;
 }
 
 body::-webkit-scrollbar-thumb {
-	border-radius: 10px;
-	background-color:var(--clr-dark);
-}
-
-
-
-body{
+    border-radius: 10px;
     background-color: var(--clr-dark);
-    color: var(--clr-light);
-   
 }
-/* about page */
+
+/* About page */
 .about {
     position: relative;
-    background-image: url(https://ionomr.com/wp-content/uploads/2018/11/ben-with-membrane-roll.jpg?id=1695);
-    background-size: cover;
-    background-position: center;
+    background: url(https://ionomr.com/wp-content/uploads/2018/11/ben-with-membrane-roll.jpg?id=1695) center / cover fixed;
     width: 100%;
-    color: white; /* Ensures text color remains visible */
+   
 }
-
-.about::before {
+.hero::after,
+.about::after,
+.resources::after,
+.how-to-buy::after{
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+    background-color: rgba(0, 0, 0, 0.6); /* Black overlay with 60% opacity */
     z-index: 1; /* Place it under the content */
+}
+.hero::after{
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .about-content {
     position: relative;
     z-index: 2; 
 }
-/*get more info page */
 
-input,textarea{
+/* Get more info page */
+input, textarea {
     background-color: #2E2D32;
-}z
-input:hover{
+   
+}
+
+input:hover {
     background-color: var(--clr-dark);
 }
-.how-to-buy{
-   
-    background: url(https://images.unsplash.com/photo-1664553928861-7a699f89acae?q=80&w=1521&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-    background-size: cover;
- 
 
-    
+/* How to buy section */
+.how-to-buy {
+    background: url(https://images.unsplash.com/photo-1664553928861-7a699f89acae?q=80&w=1521&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) center / cover fixed;
+
 }
 
-.contact-info{
-    background:url(https://images.pexels.com/photos/3735757/pexels-photo-3735757.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1) ;
-    background-size:cover;
-    background-position: center;
-    background-attachment: fixed;
+/* Contact info section */
+.contact-info {
+    background: url(https://images.pexels.com/photos/3735757/pexels-photo-3735757.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1) center / cover fixed;
 }
 
-.why-innovoja{
-    background-image: url(https://ionomr.com/wp-content/uploads/2018/10/ION_Photo_Product1_crop.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
+/* Why Innovoja section */
+.why-innovoja {
+    background: url(https://ionomr.com/wp-content/uploads/2018/10/ION_Photo_Product1_crop.jpg) center / cover fixed;
 }
-  
+
+/* Resources section */
+.resources {
+    background: url(https://ionomr.com/wp-content/uploads/2019/03/RollCut.jpg) center / cover fixed;
+}

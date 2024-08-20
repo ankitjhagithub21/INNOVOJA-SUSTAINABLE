@@ -7,6 +7,7 @@ const Team = () => {
   const members = useFetchTeamMembers()
   useEffect(()=>{
     document.title = "Our Team - Innovoja Sustainable"
+    window.scrollTo(0,0)
   },[])
   return (
     <section className='py-24 text-center'>

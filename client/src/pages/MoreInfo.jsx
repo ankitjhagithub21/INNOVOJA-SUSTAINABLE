@@ -16,7 +16,7 @@ const MoreInfo = () => {
         </p>
       </div>
 
-      <div className='w-full bg-[#EDCB91] px-5'>
+      <div className='w-full bg-[var(--clr-orange)] px-5'>
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-5 py-10 lg:w-2/3 w-full mx-auto'>
           <input 
             type="text" 
@@ -37,7 +37,7 @@ const MoreInfo = () => {
             required 
           />
           <input 
-            type="number"  
+            type="text"  
             placeholder='Phone*' 
             className='w-full py-4 px-6 rounded-full' 
             required 

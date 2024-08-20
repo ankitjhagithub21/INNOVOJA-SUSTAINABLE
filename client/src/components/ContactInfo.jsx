@@ -1,12 +1,12 @@
 import React from 'react'
 import { IoIosPhonePortrait, IoIosMailOpen } from "react-icons/io";
 import { CiLocationOn } from "react-icons/ci";
-import Overlay from './Overlay';
+
 
 const ContactInfo = () => {
   return (
    <section className=' min-h-screen py-24 w-full flex flex-col items-center justify-center gap-10 contact-info relative'>
-    <Overlay/>
+  
     <h1 className='lg:text-5xl text-3xl font-bold z-40'>Contact Info</h1>
     <div className="container mx-auto flex flex-wrap text-center z-40">
         <div className='lg:w-1/3 md:w-1/2 w-full p-5'>
