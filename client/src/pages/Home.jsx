@@ -13,12 +13,15 @@ const Home = () => {
     document.title = "Innovoja sustainable"
   },[])
   
-  
+  const data = {
+    heading:"How Do We Do That?",
+    para:"By creating the most durable and innovative ion exchange membranes and polymers:"
+  }
   return (
     <>
       <Hero/>
       <Tech/>
-      <Services/>
+      <Services data={data}/>
       <WhyInnovoja/>
       <Partners/>
 

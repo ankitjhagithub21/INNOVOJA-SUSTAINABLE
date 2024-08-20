@@ -1,13 +1,13 @@
 import Heading from "./Heading";
 
-const Services = () => {
+const Services = ({data}) => {
   return (
     <section className='py-12 lg:px-5 px-0'>
       <div className='container mx-auto'>
        <div className="text-center">
-       <Heading text={"How Do We Do That?"}/>
+       <Heading text={data.heading}/>
         <p className='my-10'>
-        By creating the most durable and innovative ion exchange membranes and polymers:
+       {data.para}
         </p>
        </div>
 
