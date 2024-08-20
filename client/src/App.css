@@ -40,7 +40,6 @@ body::-webkit-scrollbar-thumb {
 }
 .hero::after,
 .about::after,
-.resources::after,
 .how-to-buy::after{
     content: '';
     position: absolute;
@@ -51,6 +50,14 @@ body::-webkit-scrollbar-thumb {
     background-color: rgba(0, 0, 0, 0.6); /* Black overlay with 60% opacity */
     z-index: 1; /* Place it under the content */
 }
+.overlay{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
 .hero::after{
     background-color: rgba(0, 0, 0, 0.4);
 }
@@ -59,6 +66,7 @@ body::-webkit-scrollbar-thumb {
     position: relative;
     z-index: 2; 
 }
+
 
 /* Get more info page */
 input, textarea {

@@ -10,11 +10,12 @@ const Resources = () => {
   }, [])
   return (
    <>
-    <section className='resources'>
-      <div className='h-fit py-12  w-full relative flex '>
+    <section className='resources lg:min-h-screen h-fit flex items-center justify-center relative'>
+      <div className='overlay'></div>
+      <div className='md:mt-32 lg:mt-0 mt-12 py-12 w-full relative flex '>
 
 
-        <div className='h-fit w-full flex flex-wrap items-start justify-center  mt-20  px-5  z-10'>
+        <div className='h-full w-full flex flex-wrap items-start justify-center  px-5  z-10'>
           <div className='lg:w-1/4 w-full'>
             <p className='text-[var(--clr-orange)] text-xl font-bold' >Resources</p>
             <Heading text={"The"} />
