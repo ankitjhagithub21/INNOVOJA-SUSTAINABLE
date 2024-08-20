@@ -12,7 +12,7 @@ const Resources = () => {
    <>
     <section className='resources lg:min-h-screen h-fit flex items-center justify-center relative'>
       <div className='overlay'></div>
-      <div className='md:mt-32 lg:mt-0 mt-12 py-12 w-full relative flex '>
+      <div className='md:mt-32 lg:mt-12 mt-12 py-12 w-full relative flex '>
 
 
         <div className='h-full w-full flex flex-wrap items-start justify-center  px-5  z-10'>
