@@ -6,6 +6,7 @@ const connectDb = require('./conn');
 const teamRouter = require('./routes/teamRoutes');
 
 const authRouter = require('./routes/authRoutes');
+const aboutRouter = require('./routes/aboutRoutes');
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -21,6 +22,7 @@ app.use(cookieParser());
 // Routes setup
 app.use("/auth", authRouter);
 app.use("/team", teamRouter);
+app.use("/about", aboutRouter);
 
 
 // Root route

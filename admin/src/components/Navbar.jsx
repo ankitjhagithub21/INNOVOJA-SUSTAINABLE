@@ -10,6 +10,11 @@ const Navbar = () => {
                 id:1,
                 name:"Home",
                 path:"/"
+            } , 
+            {
+                id:2,
+                name:"About",
+                path:"/about"
             } ,   
             {
                 id:2,
@@ -24,6 +29,7 @@ const Navbar = () => {
     ]
     const dispatch = useDispatch()
     const location = useLocation()
+    
     const handleLogout = async() =>{
         try{
             const res = await fetch(`${import.meta.env.VITE_SERVER_URL}/auth/logout`,{

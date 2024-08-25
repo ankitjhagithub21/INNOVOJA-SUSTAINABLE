@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Heading from '../components/Heading';
+import useFetchAbout from '../hooks/useFetchAbout';
+import NotFound from './NotFound';
 
 const About = () => {
   useEffect(() => {
@@ -8,26 +10,21 @@ const About = () => {
     window.scrollTo(0, 0)
   }, []);
 
-  const data = {
-    title: "About Us",
-    paragraphs: [
-      "  Ionomr develops and markets ion-exchange membrane and polymer solutions for clean technology solutions including fuel cells, hydrogen production, and a range of energy storage applications.",
-      " After more than five decades of stagnation in materials, our products now enable product developers and integrators to optimize their product performance, improve durability, eliminate toxic components, increase recyclability, and accelerate down the cost curve earlier than anticipated.",
-      " The Company's R&D and manufacturing facilities are based in Vancouver, Canada – the worldwide hub for fuel cell research and development.",
-    ]
-  }
+  const {about,loading,error} = useFetchAbout()
+  
 
-
+  if (loading) return <p>Loading...</p>;
+  if (error) return <NotFound/>;
 
   return (
     <section>
       <div className='about lg:h-screen h-fit md:py-32 py-12 flex items-center'>
         <div className='about-content lg:w-1/2 lg:ml-[10%] pt-24   ml-0 px-5 text-white font-light lg:text-lg w-full h-full flex flex-col gap-5 items-start justify-center'>
-          <Heading text={data.title} />
+          <Heading text={about.title} />
           <div className='flex flex-col gap-3'>
 
             {
-              data.paragraphs.map((para, index) => {
+              about.paragraphs.map((para, index) => {
                 return <p key={index}>{para}</p>
               })
             }
