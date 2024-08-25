@@ -3,6 +3,8 @@ import useFetchAbout from '../hooks/useFetchAbout';
 import { useEffect } from 'react';
 import axios from 'axios';
 import toast from "react-hot-toast"
+import Loader from './Loader';
+import NotFound from './NotFound';
 axios.defaults.withCredentials = true;
 
 const About = () => {
@@ -69,8 +71,8 @@ const About = () => {
     }
   };
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>{error}</p>;
+  if (loading) return <Loader/>;
+  if (error) return <NotFound/>;
 
   return (
     <div className="md:px-12 px-5 py-24  min-h-screen">

@@ -19,12 +19,12 @@ const Navbar = () => {
                 path:"/about"
             } ,   
             {
-                id:2,
+                id:3,
                 name:"Add New Member",
                 path:"/team/add"
             } ,   
             {
-                id:3,
+                id:4,
                 name:"Team",
                 path:"/team"
             } ,       

@@ -3,9 +3,10 @@ import Member from './Member'
 import { useDispatch, useSelector } from 'react-redux'
 import useFetchTeamMembers from '../hooks/useFetchTeamMembers'
 import { setMembers } from '../redux/slices/teamSlice'
+import Loader from './Loader'
 
 const Team = () => {
-    useFetchTeamMembers()
+    const loading =  useFetchTeamMembers()
     const {members} = useSelector(state=>state.team)
 
     const dispatch = useDispatch()
@@ -50,6 +51,9 @@ const Team = () => {
     };
    
 
+    if(loading){
+        return <Loader/>
+    }
 
     return (
         <section className='py-24 relative'>
