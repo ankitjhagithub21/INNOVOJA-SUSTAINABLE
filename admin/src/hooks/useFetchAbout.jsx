@@ -4,7 +4,7 @@ import axios from 'axios';
 const useFetchAbout = () => {
   const [about, setAbout] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+
 
   useEffect(() => {
     const fetchAbout = async () => {
@@ -14,7 +14,7 @@ const useFetchAbout = () => {
           setAbout(response.data.about);
         }
       } catch (err) {
-        setError('Error fetching about data');
+        console.log(err)
       } finally {
         setLoading(false);
       }
@@ -23,7 +23,7 @@ const useFetchAbout = () => {
     fetchAbout();
   }, []);
 
-  return { about, loading, error };
+  return { about, loading};
 };
 
 export default useFetchAbout;

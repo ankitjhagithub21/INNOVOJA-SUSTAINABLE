@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import useFetchAbout from '../hooks/useFetchAbout';
 import { useEffect } from 'react';
 import axios from 'axios';
-import toast from "react-hot-toast"
+import toast from "react-hot-toast";
 import Loader from './Loader';
-import NotFound from './NotFound';
+
 axios.defaults.withCredentials = true;
 
 const About = () => {
-  const { about, loading, error } = useFetchAbout();
+  const { about, loading } = useFetchAbout();
   const [formData, setFormData] = useState({
     title: '',
     paragraphs: ['']
@@ -17,8 +17,8 @@ const About = () => {
   useEffect(() => {
     if (about) {
       setFormData({
-        title: about.title,
-        paragraphs: about.paragraphs
+        title: about.title || '',
+        paragraphs: about.paragraphs.length > 0 ? about.paragraphs : ['']
       });
     }
   }, [about]);
@@ -68,14 +68,14 @@ const About = () => {
       }
     } catch (error) {
       console.error('Error saving about data:', error);
+      toast.error("Something went wrong while saving the About section.");
     }
   };
 
-  if (loading) return <Loader/>;
-  if (error) return <NotFound/>;
+  if (loading) return <Loader />;
 
   return (
-    <div className="md:px-12 px-5 py-24  min-h-screen">
+    <div className="md:px-12 px-5 py-24 min-h-screen">
       <h1 className="text-4xl font-bold mb-6 text-center">About</h1>
       <div className="mt-8">
         <form onSubmit={handleSubmit} className="bg-white shadow-md rounded-lg p-6">
@@ -108,21 +108,21 @@ const About = () => {
               </button>
             </div>
           ))}
-        <div className='flex flex-wrap items-center gap-2 '>
-        <button
-            type="button"
-            onClick={handleAddParagraph}
-            className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600"
-          >
-            Add Paragraph
-          </button>
-          <button
-            type="submit"
-            className="bg-green-500  text-white py-2 px-4 rounded-md hover:bg-green-600"
-          >
-            Save About Section
-          </button>
-        </div>
+          <div className='flex flex-wrap items-center gap-2'>
+            <button
+              type="button"
+              onClick={handleAddParagraph}
+              className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600"
+            >
+              Add Paragraph
+            </button>
+            <button
+              type="submit"
+              className="bg-green-500 text-white py-2 px-4 rounded-md hover:bg-green-600"
+            >
+              Save About Section
+            </button>
+          </div>
         </form>
       </div>
     </div>
