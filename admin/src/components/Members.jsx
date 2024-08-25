@@ -1,7 +1,5 @@
-import React, { useState } from 'react'
 import Swal from 'sweetalert2'
 import Member from './Member'
-import UpdateMember from './UpdateMember'
 import { useDispatch, useSelector } from 'react-redux'
 import useFetchTeamMembers from '../hooks/useFetchTeamMembers'
 import { setMembers } from '../redux/slices/teamSlice'
@@ -9,8 +7,7 @@ import { setMembers } from '../redux/slices/teamSlice'
 const Members = () => {
     useFetchTeamMembers()
     const {members} = useSelector(state=>state.team)
-    const [isOpen,setIsOpen] = useState(true)
-    const [currMember,setCurrMember] = useState(null)
+
     const dispatch = useDispatch()
     const handleRemoveMember = async (memberId) => {
         Swal.fire({
@@ -51,24 +48,17 @@ const Members = () => {
             }
         });
     };
-    const handleUpdateMember = async (member) => {
-     setCurrMember(member)
-     setIsOpen(true)
-        
-       
-    }
+   
 
 
     return (
         <section className='py-24 relative'>
-            {
-               currMember && isOpen && <UpdateMember setIsOpen={setIsOpen} member={currMember}/>
-            }
+           
            
             <h1 className='text-center text-3xl font-bold mb-10'>Members</h1>
             <div className='container mx-auto flex flex-wrap justify-center'>
                 {members.map((member) => (
-                    <Member key={member._id} member={member} handleRemoveMember={handleRemoveMember} handleUpdateMember={handleUpdateMember}/>
+                    <Member key={member._id} member={member} handleRemoveMember={handleRemoveMember} />
                 ))}
             </div>
         </section>

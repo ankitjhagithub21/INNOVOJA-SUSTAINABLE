@@ -95,48 +95,11 @@ const removeMember = async (req, res) => {
         })
     }
 }
-const updateMember = async (req, res) => {
-    try {
-        const { id } = req.params;
-        const updateData = req.body;  
-       
-        if (!req.user || !req.user.isAdmin) {
-            return res.status(401).json({
-                success: false,
-                message: "Unauthorized."
-            });
-        }
 
-        
-        const member = await Member.findByIdAndUpdate(id, updateData, { new: true});
-
-       
-        if (!member) {
-            return res.status(404).json({
-                success: false,
-                message: "Member not found."
-            });
-        }
-
-       
-        res.status(200).json({
-            success: true,
-            message: "Member updated successfully.",
-            member,  
-        });
-    } catch (error) {
-       
-        res.status(500).json({
-            success: false,
-            message: error.message,
-        });
-    }
-}
 
 
 module.exports = {
     getTeamMembers,
     addNewMember,
-    removeMember,
-    updateMember
+    removeMember
 }
