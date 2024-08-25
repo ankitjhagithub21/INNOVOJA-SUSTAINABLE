@@ -13,8 +13,8 @@ const Navbar = () => {
             } ,   
             {
                 id:2,
-                name:"Profile",
-                path:"/profile"
+                name:"Add New Member",
+                path:"/team/add"
             } ,   
             {
                 id:3,

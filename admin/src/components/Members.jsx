@@ -1,6 +1,4 @@
 import React, { useState } from 'react'
-import { FaPlus } from "react-icons/fa"
-import { Link } from "react-router-dom"
 import Swal from 'sweetalert2'
 import Member from './Member'
 import UpdateMember from './UpdateMember'
@@ -66,9 +64,7 @@ const Members = () => {
             {
                currMember && isOpen && <UpdateMember setIsOpen={setIsOpen} member={currMember}/>
             }
-            <Link className='px-3 p-2 bg-[var(--clr-orange)] text-white rounded-lg absolute top-5 left-2' to={"/team/add"}> 
-                <FaPlus />
-            </Link>
+           
             <h1 className='text-center text-3xl font-bold mb-10'>Members</h1>
             <div className='container mx-auto flex flex-wrap justify-center'>
                 {members.map((member) => (
