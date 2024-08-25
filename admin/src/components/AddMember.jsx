@@ -1,32 +1,33 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import axios from 'axios';
 import toast from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
+import LoadingBar from 'react-top-loading-bar'; 
 
 const AddMember = () => {
     const [name, setName] = useState('');
     const [profilePic, setProfilePic] = useState('');
     const [role, setRole] = useState('');
     const [url, setUrl] = useState('');
-    const [file, setFile] = useState(null); // State to hold the selected file
-    const [imagePreview, setImagePreview] = useState(null); // State for image preview
+    const [file, setFile] = useState(null);
+    const [imagePreview, setImagePreview] = useState(null);
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
+    const loadingBarRef = useRef(null); 
 
     const handleFileChange = (e) => {
         const file = e.target.files[0];
         setFile(file);
-        setImagePreview(URL.createObjectURL(file)); 
+        setImagePreview(URL.createObjectURL(file));
     };
 
     const uploadImageToCloudinary = async () => {
         const formData = new FormData();
         formData.append('file', file);
-        formData.append('upload_preset', `${import.meta.env.VITE_UPLOAD_PRESET}`); 
+        formData.append('upload_preset', `${import.meta.env.VITE_UPLOAD_PRESET}`);
 
         try {
             const res = await axios.post(`https://api.cloudinary.com/v1_1/${import.meta.env.VITE_CLOUD_NAME}/image/upload`, formData);
-            
             return res.data.secure_url;
         } catch (error) {
             console.error('Error uploading image:', error);
@@ -40,6 +41,7 @@ const AddMember = () => {
         if (loading) return;
 
         setLoading(true);
+        loadingBarRef.current.continuousStart(); 
 
         let profilePicUrl = profilePic;
 
@@ -47,6 +49,7 @@ const AddMember = () => {
             profilePicUrl = await uploadImageToCloudinary();
             if (!profilePicUrl) {
                 setLoading(false);
+                loadingBarRef.current.complete(); 
                 return;
             }
         }
@@ -76,15 +79,17 @@ const AddMember = () => {
             console.log(error);
         } finally {
             setLoading(false);
+            loadingBarRef.current.complete(); 
         }
     };
 
     return (
         <div className='w-full my-12 flex items-center justify-center p-5 text-[var(--clr-dark)]'>
+            <LoadingBar color='var(--clr-orange)' ref={loadingBarRef} /> 
             <div className='md:w-1/2 w-full p-5 rounded-xl form'>
                 <h1 className='font-bold md:text-3xl text-xl text-center mb-5'>Add New Member</h1>
                 <form className='flex flex-col gap-3 text-lg' onSubmit={handleSubmit}>
-                <input
+                    <input
                         type='file'
                         onChange={handleFileChange}
                         name='image'
@@ -93,14 +98,14 @@ const AddMember = () => {
                         required
                     />
 
-                        <label htmlFor='name' className='mx-auto cursor-pointer relative md:h-44 md:w-44 h-28 w-28  rounded-lg bg-gray-200 flex items-center justify-center'>
-                           {
-                            imagePreview ? <img src={imagePreview} alt="Image Preview" className='w-full object-contain h-full' /> : 'Upload Image'
-                           
-                           }
-                         
-                        </label>
-                    
+                    <label htmlFor='name' className='mx-auto cursor-pointer relative md:h-44 md:w-44 h-28 w-28  rounded-lg bg-gray-200 flex items-center justify-center'>
+                        {imagePreview ? (
+                            <img src={imagePreview} alt='Image Preview' className='w-full object-contain h-full' />
+                        ) : (
+                            'Upload Image'
+                        )}
+                    </label>
+
                     <input
                         type='text'
                         placeholder='Enter member name'
@@ -109,8 +114,7 @@ const AddMember = () => {
                         onChange={(e) => setName(e.target.value)}
                         required
                     />
-                  
-                   
+
                     <input
                         type='text'
                         value={role}
