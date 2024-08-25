@@ -5,6 +5,6 @@ import teamSlice from './slices/teamSlice'
 export default configureStore({
   reducer: {
     auth:authSlice,
-     team:teamSlice
+    team:teamSlice
   },
 })

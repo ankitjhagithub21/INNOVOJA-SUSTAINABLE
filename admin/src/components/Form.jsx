@@ -30,8 +30,14 @@ const Form = () => {
       const data = await res.json()
 
       if (data.success) {
+       if(data.user.role==="admin"){
         dispatch(setUser(data.user))
         toast.success(data.message)
+       }else{
+       toast.error("You are not admin.")
+
+       }
+       
       } else {
         toast.error(data.message)
       }

@@ -4,27 +4,33 @@ import { setUser } from '../redux/slices/authSlice'
 
 const useFetchAuthUser = () => {
   const dispatch = useDispatch()
-  const [loading,setLoading] = useState(true)
-  const getUser = async() =>{
-    try{
-      const res = await fetch(`${import.meta.env.VITE_SERVER_URL}/auth/user`,{
-        credentials:'include'
+  const [loading, setLoading] = useState(true)
+  const getUser = async () => {
+    try {
+      const res = await fetch(`${import.meta.env.VITE_SERVER_URL}/auth/user`, {
+        credentials: 'include'
       })
       const data = await res.json()
-      if(data.success){
+      if (data.success) {
+        if (data.user.role === "admin") {
+
           dispatch(setUser(data.user))
-      }else{
+        } else {
+
+          dispatch(setUser(null))
+        }
+      } else {
         dispatch(setUser(null))
       }
-    }catch(error){
+    } catch (error) {
       console.log(error)
-    }finally{
+    } finally {
       setLoading(false)
     }
   }
-  useEffect(()=>{
+  useEffect(() => {
     getUser()
-  },[])
+  }, [])
   return loading;
 }
 

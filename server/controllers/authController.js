@@ -1,77 +1,84 @@
 const User = require("../models/user");
 const validator = require("email-validator");
 const passwordValidator = require('password-validator');
-const bcrypt = require('bcryptjs')
-const jwt = require('jsonwebtoken')
+const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
 
 const register = async (req, res) => {
     try {
-        const { email, password } = req.body;
-        if (!email || !password) {
+        const { username, email, password } = req.body;
+
+        if (!username || !email || !password) {
             return res.status(400).json({
                 success: false,
                 message: "All fields are required."
-            })
+            });
         }
-        const user = await User.findOne({ email })
 
-        if (user) {
+        const existingUser = await User.findOne({ email });
+
+        if (existingUser) {
             return res.status(400).json({
                 success: false,
-                message: "Please login."
-            })
+                message: "Email is already registered. Please login."
+            });
         }
 
-        //validate email
+        if (username.length < 3) {
+            return res.status(400).json({
+                success: false,
+                message: "Username should be greater than 3 characters."
+            });
+        }
+
+        // Validate email
         if (!validator.validate(email)) {
             return res.status(400).json({
                 success: false,
                 message: "Invalid email."
-            })
+            });
         }
-        //password validator
-        const schema = new passwordValidator();
 
+        // Validate password
+        const schema = new passwordValidator();
         schema
-            .is().min(8)                                    // Minimum length 8
-            .is().max(100)                                  // Maximum length 100
-            .has().uppercase()                              // Must have uppercase letters
-            .has().lowercase()                              // Must have lowercase letters
+            .is().min(8)
+            .is().max(100)
+            .has().uppercase()
+            .has().lowercase()
             .has().symbols()
-            .has().not().spaces()
+            .has().not().spaces();
 
         if (!schema.validate(password)) {
             return res.status(400).json({
                 success: false,
-                message: "Please choose strong password."
-            })
+                message: "Please choose a stronger password."
+            });
         }
 
-
-
-        //hash password
-
-        const hashedPassword = await bcrypt.hash(password, 10)
+        // Hash password
+        const hashedPassword = await bcrypt.hash(password, 10);
 
         const newUser = new User({
+            username,
             email,
             password: hashedPassword
-        })
+        });
 
-        await newUser.save()
+        await newUser.save();
 
         res.status(201).json({
             success: true,
-            message: "Account Created."
-        })
+            message: "Account created successfully."
+        });
 
     } catch (error) {
         res.status(500).json({
             success: false,
             message: error.message
-        })
+        });
     }
-}
+};
 
 const login = async (req, res) => {
     try {
@@ -81,114 +88,108 @@ const login = async (req, res) => {
             return res.status(400).json({
                 success: false,
                 message: "All fields are required."
-            })
+            });
         }
-        const user = await User.findOne({ email })
+
+        const user = await User.findOne({ email });
 
         if (!user) {
-            return res.status(404).json({
-                success: false,
-                message: "User not found."
-            })
-        }
-
-        const comparePassword = await bcrypt.compare(password, user.password)
-
-        if (!comparePassword) {
             return res.status(400).json({
                 success: false,
                 message: "Wrong email or password."
-            })
+            });
+        }
+
+        const isMatch = await bcrypt.compare(password, user.password);
+
+        if (!isMatch) {
+            return res.status(400).json({
+                success: false,
+                message: "Wrong email or password."
+            });
         }
 
         const secretKey = process.env.JWT_SECRET;
 
-    
         const payload = {
             _id: user._id,
-            email:user.email,
-            isAdmin:user.isAdmin
-           
+            name: user.name,
+            email: user.email,
+            role: user.role
         };
 
-        
         const options = {
             expiresIn: '1h'
         };
 
-        const token = jwt.sign(payload,secretKey,options)
+        const token = jwt.sign(payload, secretKey, options);
 
         res.cookie('token', token, {
-            maxAge: 1 * 60 * 60 * 1000,
-            httpOnly: true, 
-            secure: true, 
-            sameSite: 'none' 
+            maxAge: 3600000,
+            httpOnly: true,
+            secure: true,
+            sameSite:"none"
         });
 
-    
-
         res.status(200).json({
-            success:true,
-            message:"Login Successfull.",
-            user:payload
-        })
-
+            success: true,
+            message: "Login successful.",
+            user: payload
+        });
 
     } catch (error) {
         res.status(500).json({
             success: false,
             message: error.message
-        })
+        });
     }
-}
+};
 
 const getUser = async (req, res) => {
     try {
-        
         const user = await User.findById(req.user._id).select("-password");
 
-        if(!user){
+        if (!user) {
             return res.status(401).json({
-                success:false,
-                message:"Unauthorized."
-            })
+                success: false,
+                message: "Unauthorized."
+            });
         }
 
         res.status(200).json({
-            success:true,
+            success: true,
             user
-        })
+        });
 
     } catch (error) {
         res.status(500).json({
             success: false,
             message: error.message
-        })
+        });
     }
-}
+};
 
 const logout = async (req, res) => {
     try {
-
-        res.cookie('token','',{
-            maxAge:0
-        })
+        res.cookie('token', '', {
+            maxAge: 0
+        });
         res.status(200).json({
-            success:true,
-            message:"Logout successfull."
-        })
-        
+            success: true,
+            message: "Logout successful."
+        });
+
     } catch (error) {
         res.status(500).json({
             success: false,
             message: error.message
-        })
+        });
     }
-}
+};
 
 module.exports = {
     register,
     login,
     getUser,
     logout
-}
+};
