@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Heading from '../components/Heading';
 import useFetchAbout from '../hooks/useFetchAbout';
 import NotFound from './NotFound';
+import Loader from './Loader';
 
 const About = () => {
   useEffect(() => {
@@ -13,7 +14,7 @@ const About = () => {
   const {about,loading,error} = useFetchAbout()
   
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <Loader/>;
   if (error) return <NotFound/>;
 
   return (

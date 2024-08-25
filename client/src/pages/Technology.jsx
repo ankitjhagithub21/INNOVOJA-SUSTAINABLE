@@ -23,8 +23,9 @@ const Technology = () => {
           <h2 className='text-[var(--clr-orange)]'>Our Technology</h2>
           <h1 className=' text-4xl font-bold'>Ionomr's Advantage</h1>
           <p>Ionomr’s game changing membrane and polymer products are poised to take advantage of near-term growth opportunities in the burgeoning clean-tech sector thanks to their high efficiency, durability and cost-effectiveness.</p>
-          <p>Produced using hydrocarbon materials and a revolutionary polymer structure, Ionomr’s polymer-based solutions avoid a vast range of environmental problems associated with the production, use and disposal of fluorine-containing polymers predominantly used in clean technologies today.
-            <ul className='list-disc my-5 flex flex-col gap-3'>
+          <div>
+            <p>Produced using hydrocarbon materials and a revolutionary polymer structure, Ionomr’s polymer-based solutions avoid a vast range of environmental problems associated with the production, use and disposal of fluorine-containing polymers predominantly used in clean technologies today.</p>
+            <ul className='list-disc my-5 px-4 flex flex-col gap-3'>
               <li>Environmentally non-toxic</li>
               <li>High ionic conductivity
 
@@ -33,7 +34,7 @@ const Technology = () => {
             </ul>
             <p>Given our robust mechanical properties, Ionomr is able to produce ultra-thin membranes with industry-leading performance for a range of applications including fuel cells, hydrogen production, advanced energy storage and on-site chemical recovery.</p>
 
-          </p>
+          </div>
         </div>
 
       </div>
