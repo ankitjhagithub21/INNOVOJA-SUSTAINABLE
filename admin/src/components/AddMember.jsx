@@ -84,7 +84,7 @@ const AddMember = () => {
     };
 
     return (
-        <div className='w-full my-12 flex items-center justify-center p-5 text-[var(--clr-dark)]'>
+        <div className='w-full my-12 py-12 flex items-center justify-center p-5 text-[var(--clr-dark)]'>
             <LoadingBar color='var(--clr-orange)' ref={loadingBarRef} /> 
             <div className='md:w-1/2 w-full p-5 rounded-xl form'>
                 <h1 className='font-bold md:text-3xl text-xl text-center mb-5'>Add New Member</h1>
@@ -98,11 +98,11 @@ const AddMember = () => {
                         required
                     />
 
-                    <label htmlFor='name' className='mx-auto cursor-pointer relative md:h-44 md:w-44 h-28 w-28  rounded-lg bg-gray-200 flex items-center justify-center'>
+                    <label htmlFor='name' className='mx-auto  cursor-pointer relative md:h-44 md:w-44 h-28 w-28  rounded-lg bg-gray-200 flex items-center justify-center'>
                         {imagePreview ? (
                             <img src={imagePreview} alt='Image Preview' className='w-full object-contain h-full' />
                         ) : (
-                            'Upload Image'
+                            <p className='text-center'>Upload Image</p>
                         )}
                     </label>
 

@@ -73,7 +73,7 @@ const About = () => {
   if (error) return <p>{error}</p>;
 
   return (
-    <div className="p-6  min-h-screen">
+    <div className="md:px-12 px-5 py-24  min-h-screen">
       <h1 className="text-4xl font-bold mb-6 text-center">About</h1>
       <div className="mt-8">
         <form onSubmit={handleSubmit} className="bg-white shadow-md rounded-lg p-6">
@@ -100,25 +100,27 @@ const About = () => {
               <button
                 type="button"
                 onClick={() => handleRemoveParagraph(index)}
-                className="bg-red-500 text-white py-1 px-2 mt-2 rounded-md hover:bg-red-600"
+                className="bg-red-500 text-white py-1 px-2 rounded-md hover:bg-red-600"
               >
                 Remove Paragraph
               </button>
             </div>
           ))}
-          <button
+        <div className='flex flex-wrap items-center gap-2 '>
+        <button
             type="button"
             onClick={handleAddParagraph}
-            className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 mb-4"
+            className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600"
           >
             Add Paragraph
           </button>
           <button
             type="submit"
-            className="bg-green-500 mx-2 text-white py-2 px-4 rounded-md hover:bg-green-600"
+            className="bg-green-500  text-white py-2 px-4 rounded-md hover:bg-green-600"
           >
             Save About Section
           </button>
+        </div>
         </form>
       </div>
     </div>
