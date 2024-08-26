@@ -8,6 +8,10 @@ const aboutSchema = new mongoose.Schema({
     paragraphs: {
         type: [String], 
         required: true,
+    },
+    bgImage:{
+        type:String,
+        default:"/about.jpg"
     }
 },{versionKey:false});
 

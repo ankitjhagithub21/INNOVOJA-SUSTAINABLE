@@ -4,12 +4,12 @@ const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const connectDb = require('./conn');
 const teamRouter = require('./routes/teamRoutes');
-
 const authRouter = require('./routes/authRoutes');
 const aboutRouter = require('./routes/aboutRoutes');
-
 const app = express();
 const port = process.env.PORT || 3000;
+
+
 
 // Middleware setup
 app.use(express.json());
@@ -18,6 +18,7 @@ app.use(cors({
   credentials: true
 }));
 app.use(cookieParser());
+
 
 // Routes setup
 app.use("/auth", authRouter);

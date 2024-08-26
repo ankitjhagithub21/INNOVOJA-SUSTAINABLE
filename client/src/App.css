@@ -34,8 +34,12 @@ body::-webkit-scrollbar-thumb {
 /* About page */
 .about {
     position: relative;
-    background: url(https://ionomr.com/wp-content/uploads/2018/11/ben-with-membrane-roll.jpg?id=1695) center / cover fixed;
+    background: url("/about.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
     width: 100%;
+
    
 }
 .hero::after,

@@ -11,15 +11,15 @@ const About = () => {
     window.scrollTo(0, 0)
   }, []);
 
-  const {about,loading,error} = useFetchAbout()
-  
+  const { about, loading, error } = useFetchAbout()
 
-  if (loading) return <Loader/>;
-  if (error) return <NotFound/>;
+
+  if (loading) return <Loader />;
+  if (error) return <NotFound />;
 
   return (
     <section>
-      <div className='about lg:h-screen h-fit md:py-32 py-12 flex items-center'>
+      <div className={`about lg:h-screen h-fit md:py-32 py-12 flex items-center`}>
         <div className='about-content lg:w-1/2 lg:ml-[10%] pt-24   ml-0 px-5 text-white font-light lg:text-lg w-full h-full flex flex-col gap-5 items-start justify-center'>
           <Heading text={about.title} />
           <div className='flex flex-col gap-3'>

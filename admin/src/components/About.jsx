@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState,useRef } from 'react';
 import useFetchAbout from '../hooks/useFetchAbout';
 import { useEffect } from 'react';
 import axios from 'axios';
 import toast from "react-hot-toast";
 import Loader from './Loader';
+import LoadingBar from 'react-top-loading-bar';
+
 
 axios.defaults.withCredentials = true;
 
@@ -13,6 +15,8 @@ const About = () => {
     title: '',
     paragraphs: ['']
   });
+  const [submitting, setSubmitting] = useState(false);
+  const loadingBarRef = useRef(null);
 
   useEffect(() => {
     if (about) {
@@ -57,8 +61,10 @@ const About = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    setSubmitting(true);
+    loadingBarRef.current.continuousStart();
     try {
+      
       const response = about
         ? await axios.put(`${import.meta.env.VITE_SERVER_URL}/about/update`, formData)
         : await axios.post(`${import.meta.env.VITE_SERVER_URL}/about/create`, formData);
@@ -69,6 +75,9 @@ const About = () => {
     } catch (error) {
       console.error('Error saving about data:', error);
       toast.error("Something went wrong while saving the About section.");
+    }finally {
+      setSubmitting(false);
+      loadingBarRef.current.complete(); 
     }
   };
 
@@ -76,6 +85,7 @@ const About = () => {
 
   return (
     <div className="md:px-12 px-5 py-24 min-h-screen">
+       <LoadingBar color="#f11946" ref={loadingBarRef} />
       <h1 className="text-4xl font-bold mb-6 text-center">About</h1>
       <div className="mt-8">
         <form onSubmit={handleSubmit} className="bg-white shadow-md rounded-lg p-6">
@@ -120,7 +130,7 @@ const About = () => {
               type="submit"
               className="bg-green-500 text-white py-2 px-4 rounded-md hover:bg-green-600"
             >
-              Save About Section
+              {submitting ? 'Saving...' : 'Save About Section'}
             </button>
           </div>
         </form>

@@ -113,9 +113,10 @@ const login = async (req, res) => {
 
         const payload = {
             _id: user._id,
-            name: user.name,
+            username: user.username,
             email: user.email,
-            role: user.role
+            role: user.role,
+            profilePic:user.profilePic
         };
 
         const options = {
