@@ -29,7 +29,7 @@ const Navbar = () => {
                   location.pathname === link.path 
                     ? 'bg-[var(--clr-orange)] text-white'  
                     : 'hover:bg-[var(--clr-orange)] hover:text-white'
-                } px-3 py-2 mx-1 rounded-full`}
+                } px-3 py-2 mx-1 font-semibold rounded-full`}
                 onClick={() => {
                   setMenu(false);
                   window.scrollTo(0, 0);
@@ -46,7 +46,7 @@ const Navbar = () => {
           onClick={() => {
             window.scrollTo(0, 0);
           }}
-          className='px-4 py-2 bg-[var(--clr-orange)] transition duration-300 rounded-full md:block hidden hover:bg-[var(--clr-dark)] hover:text-white'
+          className='px-4 py-2 bg-[var(--clr-orange)] transition text-white duration-300 rounded-full md:block hidden hover:bg-[var(--clr-dark)]'
         >
           Get More Info
         </Link>

@@ -14,7 +14,7 @@ const Hero = () => {
 
            
             <div className='relative flex flex-col gap-1 px-5  md:mt-24 mt-12 lg:mt-0 text-white z-10 text-center hover:scale-105 transition'>
-             <h2 className='lg:text-5xl md:text-xl text-sm font-bold'>INNOVOJA SUSTAINABLE SOLUTIONS</h2>
+             <h2 className='lg:text-5xl md:text-xl text-sm font-extrabold'>INNOVOJA SUSTAINABLE SOLUTIONS</h2>
                 <p className='lg:text-3xl text-sm'>
                     enables the global renewable transition with
                 </p>
